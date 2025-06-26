@@ -1,0 +1,595 @@
+/* Responsive Grid Columns (Bootstrap-like) */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .apartment-type-cards,
+    .properties-section-cards,
+    .newsletter-form,
+    .footer-content {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .apartment-type-cards > div,
+    .properties-section-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .banner-content > h1 {
+        font-size: 28px;
+    }
+    .banner-content > p,
+    .about-section-content > p,
+    .services-section-content > p,
+    .testimonials-section-content > h3 {
+        font-size: 16px;
+    }
+    .apartment-section > div > div,
+    .about-section > div > div,
+    .services-section > div > div,
+    .testimonials-section > div > div,
+    .companies-section > div > div,
+    .footer-section > div > div {
+        padding: 0 5px;
+    }
+    .header-section > div > div > div {
+        flex-direction: column;
+        padding: 15px 10px;
+        border-radius: 20px;
+    }
+    .nav-left > ul,
+    .nav-right > ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .menu {
+        display: block !important;
+    }
+    .apartment-search {
+        flex-direction: column;
+        padding: 18px 8px;
+        border-radius: 10px;
+        top: -180px;
+    }
+    .form-area,
+    .form-row:first-child,
+    .form-row:last-child {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100%;
+    }
+    .form-row:first-child > .form-group:nth-child(2) > input,
+    .slider-container {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .price-slider {
+        width: 100% !important;
+    }
+    .image-container,
+    .image-container1,
+    .testimonials1,
+    .testimonials2 {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .testimonials-image,
+    .testimonials-image > img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .testimonial-card {
+        width: 90% !important;
+        right: 5% !important;
+        left: 5% !important;
+        padding: 12px 10px;
+    }
+    .newsletter-area {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .newsletter-area-header > h5 {
+        font-size: 22px;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-height: unset;
+        align-items: flex-start;
+    }
+    .divider2 {
+        display: none;
+    }
+    .property-images-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .property-image-row {
+        flex-direction: row;
+        gap: 4px;
+    }
+    .property-images {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        width: 100%;
+        padding: 0 12px;
+    }
+    .apartment-type-cards,
+    .properties-section-cards,
+    .newsletter-form,
+    .footer-content {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+    .apartment-type-cards > div,
+    .properties-section-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .banner-content > h1 {
+        font-size: 32px;
+    }
+    .apartment-section > div > div,
+    .about-section > div > div,
+    .services-section > div > div,
+    .testimonials-section > div > div,
+    .companies-section > div > div,
+    .footer-section > div > div {
+        padding: 0 10px;
+    }
+    .header-section > div > div > div {
+        flex-direction: column;
+        padding: 20px 15px;
+        border-radius: 30px;
+    }
+    .nav-left > ul,
+    .nav-right > ul {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .menu {
+        display: block !important;
+    }
+    .apartment-search {
+        flex-direction: column;
+        padding: 22px 12px;
+        border-radius: 15px;
+        top: -200px;
+    }
+    .form-area,
+    .form-row:first-child,
+    .form-row:last-child {
+        flex-direction: column !important;
+        gap: 12px !important;
+        width: 100%;
+    }
+    .form-row:first-child > .form-group:nth-child(2) > input,
+    .slider-container {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .price-slider {
+        width: 100% !important;
+    }
+    .image-container,
+    .image-container1,
+    .testimonials1,
+    .testimonials2 {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .testimonials-image,
+    .testimonials-image > img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .testimonial-card {
+        width: 90% !important;
+        right: 5% !important;
+        left: 5% !important;
+        padding: 14px 18px;
+    }
+    .newsletter-area {
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+    }
+    .newsletter-area-header > h5 {
+        font-size: 26px;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-height: unset;
+        align-items: flex-start;
+    }
+    .divider2 {
+        display: none;
+    }
+    .property-images-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .property-image-row {
+        flex-direction: row;
+        gap: 6px;
+    }
+    .property-images {
+        width: 70px;
+        height: 48px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .col-1 { width: 16.66%; }
+    .col-2 { width: 33.33%; }
+    .col-3 { width: 50%; }
+    .col-4 { width: 66.66%; }
+    .col-5 { width: 83.33%; }
+    .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { width: 100%; }
+    .apartment-type-cards,
+    .properties-section-cards,
+    .newsletter-form,
+    .footer-content {
+        flex-direction: column !important;
+        gap: 28px !important;
+    }
+    .apartment-type-cards > div,
+    .properties-section-card {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .banner-content > h1 {
+        font-size: 38px;
+    }
+    .apartment-section > div > div,
+    .about-section > div > div,
+    .services-section > div > div,
+    .testimonials-section > div > div,
+    .companies-section > div > div,
+    .footer-section > div > div {
+        padding: 0 20px;
+    }
+    .header-section > div > div > div {
+        flex-direction: column;
+        padding: 25px 20px;
+        border-radius: 40px;
+    }
+    .nav-left > ul,
+    .nav-right > ul {
+        flex-direction: row;
+        gap: 28px;
+    }
+    .menu {
+        display: block !important;
+    }
+    .apartment-search {
+        flex-direction: column;
+        padding: 26px 18px;
+        border-radius: 20px;
+        top: -220px;
+    }
+    .form-area,
+    .form-row:first-child,
+    .form-row:last-child {
+        flex-direction: column !important;
+        gap: 14px !important;
+        width: 100%;
+    }
+    .form-row:first-child > .form-group:nth-child(2) > input,
+    .slider-container {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .price-slider {
+        width: 100% !important;
+    }
+    .image-container,
+    .image-container1,
+    .testimonials1,
+    .testimonials2 {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .testimonials-image,
+    .testimonials-image > img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .testimonial-card {
+        width: 80% !important;
+        right: 10% !important;
+        left: 10% !important;
+        padding: 18px 24px;
+    }
+    .newsletter-area {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+    .newsletter-area-header > h5 {
+        font-size: 28px;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-height: unset;
+        align-items: flex-start;
+    }
+    .divider2 {
+        display: none;
+    }
+    .property-images-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .property-image-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+    .property-images {
+        width: 80px;
+        height: 54px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .col-1 { width: 8.33%; }
+    .col-2 { width: 16.66%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.33%; }
+    .col-5 { width: 41.66%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.33%; }
+    .col-8 { width: 66.66%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
+    .apartment-type-cards,
+    .properties-section-cards,
+    .newsletter-form,
+    .footer-content {
+        flex-direction: row !important;
+        gap: 32px !important;
+    }
+    .apartment-type-cards > div,
+    .properties-section-card {
+        width: 48% !important;
+        min-width: 0 !important;
+    }
+    .banner-content > h1 {
+        font-size: 44px;
+    }
+    .apartment-section > div > div,
+    .about-section > div > div,
+    .services-section > div > div,
+    .testimonials-section > div > div,
+    .companies-section > div > div,
+    .footer-section > div > div {
+        padding: 0 30px;
+    }
+    .header-section > div > div > div {
+        flex-direction: row;
+        padding: 30px 30px;
+        border-radius: 50px;
+    }
+    .nav-left > ul,
+    .nav-right > ul {
+        flex-direction: row;
+        gap: 32px;
+    }
+    .menu {
+        display: none !important;
+    }
+    .apartment-search {
+        flex-direction: row;
+        padding: 28px 24px;
+        border-radius: 15px;
+        top: -265px;
+    }
+    .form-area,
+    .form-row:first-child,
+    .form-row:last-child {
+        flex-direction: row !important;
+        gap: 15px !important;
+        width: 100%;
+    }
+    .form-row:first-child > .form-group:nth-child(2) > input,
+    .slider-container {
+        width: 390px !important;
+        min-width: 0 !important;
+    }
+    .price-slider {
+        width: 366px !important;
+    }
+    .image-container,
+    .image-container1,
+    .testimonials1,
+    .testimonials2 {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .testimonials-image,
+    .testimonials-image > img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .testimonial-card {
+        width: 340px !important;
+        right: 20px !important;
+        left: unset !important;
+        padding: 17px 37px 29px 42px;
+    }
+    .newsletter-area {
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+    .newsletter-area-header > h5 {
+        font-size: 32px;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-height: 174px;
+        align-items: flex-start;
+    }
+    .divider2 {
+        display: block;
+    }
+    .property-images-container {
+        flex-direction: column;
+        height: 136px;
+    }
+    .property-image-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+    .property-images {
+        width: 95px;
+        height: 64px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .col-1 { width: 8.33%; }
+    .col-2 { width: 16.66%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.33%; }
+    .col-5 { width: 41.66%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.33%; }
+    .col-8 { width: 66.66%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%; }
+    .apartment-type-cards,
+    .properties-section-cards,
+    .newsletter-form,
+    .footer-content {
+        flex-direction: row !important;
+        gap: 43.41px !important;
+    }
+    .apartment-type-cards > div,
+    .properties-section-card {
+        width: 174.59px !important;
+        min-width: 0 !important;
+    }
+    .banner-content > h1 {
+        font-size: 48px;
+    }
+    .apartment-section > div > div,
+    .about-section > div > div,
+    .services-section > div > div,
+    .testimonials-section > div > div,
+    .companies-section > div > div,
+    .footer-section > div > div {
+        padding: 0 15px;
+    }
+    .header-section > div > div > div {
+        flex-direction: row;
+        padding: 30px 50px 30px 49px;
+        border-radius: 50px;
+    }
+    .nav-left > ul,
+    .nav-right > ul {
+        flex-direction: row;
+        gap: 41px;
+    }
+    .menu {
+        display: none !important;
+    }
+    .apartment-search {
+        flex-direction: row;
+        padding: 28px 24px 26.26px 24px;
+        border-radius: 15px;
+        top: -265px;
+    }
+    .form-area,
+    .form-row:first-child,
+    .form-row:last-child {
+        flex-direction: row !important;
+        gap: 15px !important;
+        width: 100%;
+    }
+    .form-row:first-child > .form-group:nth-child(2) > input,
+    .slider-container {
+        width: 390px !important;
+        min-width: 0 !important;
+    }
+    .price-slider {
+        width: 366px !important;
+    }
+    .image-container,
+    .image-container1,
+    .testimonials1,
+    .testimonials2 {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        width: 100% !important;
+    }
+    .testimonials-image,
+    .testimonials-image > img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    .testimonial-card {
+        width: 340px !important;
+        right: 20px !important;
+        left: unset !important;
+        padding: 17px 37px 29px 42px;
+    }
+    .newsletter-area {
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+    .newsletter-area-header > h5 {
+        font-size: 32px;
+    }
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        min-height: 174px;
+        align-items: flex-start;
+    }
+    .divider2 {
+        display: block;
+    }
+    .property-images-container {
+        flex-direction: column;
+        height: 136px;
+    }
+    .property-image-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+    .property-images {
+        width: 95px;
+        height: 64px;
+    }
+}
