@@ -136,7 +136,7 @@ a:hover {
 
 .header-section {
   position: absolute;
-  top: 0;
+  top: 31px;
   left: 0;
   right: 0;
   z-index: 1;
@@ -168,10 +168,8 @@ a:hover {
   display: none;
 }
 
-.menu>span{
-  background: var(--color-black);
-  width: 100%;
-  height: 2px;
+.menu>i{
+  font-size: 20px;
 }
 
 .nav-left,
@@ -197,7 +195,7 @@ a:hover {
   transition: color 0.3s ease-in-out;
 }
 
-.nav-left > ul > li:first-child > a {
+.nav-link.active {
   color: var(--color-primary) !important;
 }
 
@@ -960,6 +958,10 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 48px;
 }
 
+.properties-section-cards>.swiper-wrapper>.swiper-slide{
+  width: 286px !important;
+}
+
 .properties-section-card {
   width: 100%;
   height: 100%;
@@ -1181,12 +1183,12 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 40px;
 }
 
-.testimonials-section > div > div {
+/* .testimonials-section > div > div {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-}
+} */
 
 .testimonials-section-content {
   display: flex;
@@ -1221,12 +1223,31 @@ input[type="range"]::-webkit-slider-thumb {
 
 .testimonials-image-container {
   max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-top: 40px;
+  /* removed flexbox! */
 }
 
+.swiper {
+  width: 100%;
+  min-width: 0;
+  
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+}
+
+.testimonial-swiper>.swiper-wrapper>.swiper-slide {
+  width: 618px !important;
+  height: 370px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
 .testimonials1,
 .testimonials2 {
   width: 618px;
@@ -1319,6 +1340,20 @@ input[type="range"]::-webkit-slider-thumb {
 
 .star.empty {
   background-image: url("../assets/icons/mdi_star-outline.png");
+}
+
+.swiper-pagination-bullet {
+  width: 32px;
+  height: 4px;
+  border-radius: 3px;
+  margin: 0 4px !important;
+  background: #e0e0e0;
+  opacity: 1 !important;
+  transition: background 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary);
 }
 
 /* Companies Section */

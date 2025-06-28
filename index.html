@@ -22,11 +22,12 @@
     <!-- Swiper CDN -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsiveCSS.css" />
   </head>
   <body>
     <header class="header-section">
@@ -34,15 +35,15 @@
         <div class="row">
           <div class="col-12">
             <div class="menu">
-              <span></span>
-              <span></span>
-              <span></span>
+              <i class="fa-solid fa-bars"></i>
             </div>
             <nav class="nav-left">
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Properties</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li>
+                  <a href="properties.html" class="nav-link">Properties</a>
+                </li>
               </ul>
             </nav>
             <a href="/" class="nav-logo">
@@ -326,135 +327,401 @@
                 </div>
                 <a href="#" class="listings">All Listings</a>
               </div>
-              <div class="properties-section-cards">
-                <div class="col-3">
-                  <div class="properties-section-card">
-                    <div class="property-section-card-img">
-                      <img src="./assets/Rectangle 29.png" alt="" />
-                    </div>
-                    <div class="txt-overlay">
-                      <div class="txt-overlay-row1">
-                        <h3>Sobha Heartland Villa</h3>
-                        <div class="rating">
-                          <div class="rating-icon">
-                            <img
-                              src="./assets/icons/material-symbols_star-rounded.png"
-                              alt=""
-                            />
-                          </div>
-                          <span>4.8</span>
-                        </div>
+              <div class="properties-section-cards swiper properties-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 29.png" alt="" />
                       </div>
-                      <div class="txt-overlay-row2">
-                        <div class="location">
-                          <div class="location-icon">
-                            <img
-                              src="./assets/icons/fluent_location-16-filled.png"
-                              alt=""
-                            />
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Sobha Heartland Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
                           </div>
-                          <span>Berlin, Germany</span>
                         </div>
-                        <a href="#" class="detail-btn">Detail</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="properties-section-card">
-                    <div class="property-section-card-img">
-                      <img src="./assets/Rectangle 30.png" alt="" />
-                    </div>
-                    <div class="txt-overlay">
-                      <div class="txt-overlay-row1">
-                        <h3>Hillside Haven</h3>
-                        <div class="rating">
-                          <div class="rating-icon">
-                            <img
-                              src="./assets/icons/material-symbols_star-rounded.png"
-                              alt=""
-                            />
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Berlin, Germany</span>
                           </div>
-                          <span>4.8</span>
+                          <a href="#" class="detail-btn">Detail</a>
                         </div>
-                      </div>
-                      <div class="txt-overlay-row2">
-                        <div class="location">
-                          <div class="location-icon">
-                            <img
-                              src="./assets/icons/fluent_location-16-filled.png"
-                              alt=""
-                            />
-                          </div>
-                          <span>Genoa, Italy</span>
-                        </div>
-                        <a href="#" class="detail-btn">Detail</a>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-3">
-                  <div class="properties-section-card">
-                    <div class="property-section-card-img">
-                      <img src="./assets/Rectangle 31.png" alt="" />
-                    </div>
-                    <div class="txt-overlay">
-                      <div class="txt-overlay-row1">
-                        <h3>Island Paradise Villa</h3>
-                        <div class="rating">
-                          <div class="rating-icon">
-                            <img
-                              src="./assets/icons/material-symbols_star-rounded.png"
-                              alt=""
-                            />
-                          </div>
-                          <span>4.8</span>
-                        </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 30.png" alt="" />
                       </div>
-                      <div class="txt-overlay-row2">
-                        <div class="location">
-                          <div class="location-icon">
-                            <img
-                              src="./assets/icons/fluent_location-16-filled.png"
-                              alt=""
-                            />
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Hillside Haven</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
                           </div>
-                          <span>Paris, France</span>
                         </div>
-                        <a href="#" class="detail-btn">Detail</a>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Genoa, Italy</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-3">
-                  <div class="properties-section-card">
-                    <div class="property-section-card-img">
-                      <img src="./assets/Rectangle 32.png" alt="" />
-                    </div>
-                    <div class="txt-overlay">
-                      <div class="txt-overlay-row1">
-                        <h3>Emerald Coast Manor</h3>
-                        <div class="rating">
-                          <div class="rating-icon">
-                            <img
-                              src="./assets/icons/material-symbols_star-rounded.png"
-                              alt=""
-                            />
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 31.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Island Paradise Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
                           </div>
-                          <span>4.8</span>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Paris, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
                         </div>
                       </div>
-                      <div class="txt-overlay-row2">
-                        <div class="location">
-                          <div class="location-icon">
-                            <img
-                              src="./assets/icons/fluent_location-16-filled.png"
-                              alt=""
-                            />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 32.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Emerald Coast Manor</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
                           </div>
-                          <span>Lyon, France</span>
                         </div>
-                        <a href="#" class="detail-btn">Detail</a>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Lyon, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 29.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Sobha Heartland Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Berlin, Germany</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 30.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Hillside Haven</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Genoa, Italy</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 31.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Island Paradise Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Paris, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 32.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Emerald Coast Manor</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Lyon, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 29.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Sobha Heartland Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Berlin, Germany</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 30.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Hillside Haven</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Genoa, Italy</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 31.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Island Paradise Villa</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Paris, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="properties-section-card">
+                      <div class="property-section-card-img">
+                        <img src="./assets/Rectangle 32.png" alt="" />
+                      </div>
+                      <div class="txt-overlay">
+                        <div class="txt-overlay-row1">
+                          <h3>Emerald Coast Manor</h3>
+                          <div class="rating">
+                            <div class="rating-icon">
+                              <img
+                                src="./assets/icons/material-symbols_star-rounded.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>4.8</span>
+                          </div>
+                        </div>
+                        <div class="txt-overlay-row2">
+                          <div class="location">
+                            <div class="location-icon">
+                              <img
+                                src="./assets/icons/fluent_location-16-filled.png"
+                                alt=""
+                              />
+                            </div>
+                            <span>Lyon, France</span>
+                          </div>
+                          <a href="#" class="detail-btn">Detail</a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -526,63 +793,267 @@
               <h3>What Our Customer Says</h3>
             </div>
             <div class="testimonials-image-container">
-              <div class="testimonials1">
-                <div class="testimonials-image">
-                  <img src="./assets/Rectangle 42.png" alt="" />
-                </div>
-                <div class="testimonial-card">
-                  <p>
-                    Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
-                    neque viverra elementum quam turpis morbi. Suspendisse orci
-                    tristique leo sit eu nunc.
-                  </p>
-                  <span></span>
-                  <div class="author">
-                    <img
-                      src="./assets/customer-images/Ellipse 6.png"
-                      class="author-img"
-                    />
-                    <div>
-                      <h4>William Jones</h4>
-                      <div class="star-rating">
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star empty"></span>
+              <div class="swiper testimonials-swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials1">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 42.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>William Jones</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials2">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 44.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>Jake Paul</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more slides as needed -->
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials1">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 42.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>William Jones</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials2">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 44.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>Jake Paul</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials1">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 42.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>William Jones</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials2">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 44.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>Jake Paul</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials1">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 42.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>William Jones</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div class="testimonials2">
+                      <div class="testimonials-image">
+                        <img src="./assets/Rectangle 44.png" alt="" />
+                      </div>
+                      <div class="testimonial-card">
+                        <p>
+                          Lorem ipsum dolor sit amet consec. Mauris a vitae
+                          commodo neque viverra elementum quam turpis morbi.
+                          Suspendisse orci tristique leo sit eu nunc.
+                        </p>
+                        <span></span>
+                        <div class="author">
+                          <img
+                            src="./assets/customer-images/Ellipse 6.png"
+                            class="author-img"
+                          />
+                          <div>
+                            <h4>Jake Paul</h4>
+                            <div class="star-rating">
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star full"></span>
+                              <span class="star empty"></span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="testimonials2">
-                <div class="testimonials-image">
-                  <img src="./assets/Rectangle 44.png" alt="" />
-                </div>
-                <div class="testimonial-card">
-                  <p>
-                    Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
-                    neque viverra elementum quam turpis morbi. Suspendisse orci
-                    tristique leo sit eu nunc.
-                  </p>
-                  <span></span>
-                  <div class="author">
-                    <img
-                      src="./assets/customer-images/Ellipse 6.png"
-                      class="author-img"
-                    />
-                    <div>
-                      <h4>William Jones</h4>
-                      <div class="star-rating">
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star full"></span>
-                        <span class="star empty"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -731,7 +1202,7 @@
 
     <script src="./js/index.js"></script>
     <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Splide JS -->
     <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
