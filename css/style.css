@@ -595,7 +595,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 8.76px;
   font-size: 10px;
   font-weight: 400;
-  font-family: 'Lato',sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .btn-search {
@@ -1251,7 +1251,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .testimonials1,
 .testimonials2 {
-  width: 618px;
+  width: 511px;
   height: 370px;
   display: flex;
   justify-content: center;
@@ -1259,10 +1259,10 @@ input[type="range"]::-webkit-slider-thumb {
   position: relative;
 }
 .testimonials-image {
-  max-width: 511px;
   height: 370px;
   border-radius: 30px;
   background: var(--color-light-grey-4);
+  width: 100%;
 }
 .testimonials-image > img {
   width: 100%;

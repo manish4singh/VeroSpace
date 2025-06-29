@@ -74,12 +74,11 @@
     top: 15px;
   }
 
-  .header-section > div > div > div{
+  .header-section > div > div > div {
     padding: 20px;
   }
 
-  .header-section > div > div > div
-  .banner-content {
+  .header-section > div > div > div .banner-content {
     margin-top: 30px;
   }
 
@@ -123,7 +122,7 @@
     top: 10px;
   }
 
-  .header-section > div > div > div{
+  .header-section > div > div > div {
     padding: 20px;
   }
 
@@ -152,5 +151,610 @@
   }
   .apartment-content {
     margin-top: 90px;
+  }
+  .testimonial-card {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    transform: none;
+    padding: 12px;
+    width: 52%;
+  }
+  .testimonial-card > p {
+    font-size: 14px;
+    line-height: 120%;
+  }
+  .author h4 {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .overlay {
+    padding: 10px;
+  }
+  .bottom-img2 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .banner-content {
+    margin-top: 100px;
+  }
+
+  .banner-content > h1 {
+    font-size: 42px;
+  }
+
+  .apartment-search {
+    top: -125px;
+  }
+
+  .divider2,
+  .testimonial-card > span {
+    display: none;
+  }
+
+  .form-area,
+  .form-row:first-child,
+  .form-row:last-child,
+  .about-section > div > div > div,
+  .services-content,
+  .stats-row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .slider-container {
+    width: 100%;
+  }
+
+  /* About page specific styles */
+  .commitment-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .mission-vision-area {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .vision-area,
+  .mission-area {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .properties-section-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .properties-section-cards .col-3 {
+    width: 45%;
+    min-width: 250px;
+  }
+
+  /* Bottom image responsive fixes */
+  .bottom-img2 {
+    right: -80px;
+    width: 45%;
+    bottom: -25px;
+    border-radius: 25px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 25px;
+  }
+
+  .overlay {
+    right: -30px;
+    top: 45%;
+    padding: 22px 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .col-10,
+  .col-6,
+  .col-2,
+  .col-5,
+  .col-4,
+  .col-3 {
+    width: 100% !important;
+  }
+
+  .footer-content,
+  .newsletter-area,
+  .newsletter-form,
+  .apartment-type-cards {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-row:first-child > .form-group:first-child,
+  .form-row:first-child > .form-group:nth-child(2),
+  .form-row:first-child > .form-group:nth-child(3),
+  .form-row:last-child > .form-group:first-child,
+  .form-row:last-child > .form-group:nth-child(3) .form-row > .slider-container,
+  .form-row > .room-type {
+    width: 100%;
+  }
+
+  .header-section > div > div > div {
+    flex-direction: row-reverse;
+  }
+
+  /* About page specific tablet styles */
+  .about-section > div > div > div {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bottom-img2 {
+    right: -60px;
+    width: 55%;
+    bottom: -30px;
+    border-radius: 20px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 20px;
+  }
+
+  .overlay {
+    right: -25px;
+    top: 42%;
+    padding: 18px 22px;
+  }
+
+  .commitment-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .commitment-section-header,
+  .teams-section-header {
+    max-width: 100%;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .mission-vision-area {
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-start;
+  }
+
+  .properties-section-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .properties-section-cards .col-3 {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .teams-section {
+    margin: 20px;
+    border-radius: 20px;
+  }
+
+  .experience-box {
+    margin-bottom: 20px;
+  }
+
+  .overlay {
+    right: -20px;
+    padding: 20px 25px;
+  }
+
+  .overlay > p {
+    font-size: 28px;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 700px) {
+  .header-section {
+    top: 15px;
+  }
+
+  .header-section > div > div > div {
+    padding: 20px;
+  }
+
+  .header-section > div > div > div .banner-content {
+    margin-top: 30px;
+  }
+
+  .banner-content > h1 {
+    font-size: 32px;
+  }
+
+  .testimonial-swiper > .swiper-wrapper > .swiper-slide,
+  .testimonials1,
+  .testimonials2 {
+    width: 100vw !important;
+    min-width: 0;
+    height: auto !important;
+  }
+
+  .testimonials-image {
+    max-width: 100vw;
+    height: 100%;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    transform: none;
+    padding: 12px;
+    width: 80%;
+  }
+
+  .testimonial-card > p {
+    font-size: 13px;
+    line-height: 120%;
+  }
+
+  .author h4 {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  /* About page specific styles for medium screens */
+  .about-section-content > h3,
+  .commitment-text-content > h3,
+  .teams-section-content > h3 {
+    font-size: 28px;
+  }
+
+  .about-section-content > p,
+  .commitment-text-content > p {
+    font-size: 16px;
+  }
+
+  .text-container > h3,
+  .vision-area > h4,
+  .mission-area > h4 {
+    font-size: 20px;
+  }
+
+  .overlay {
+    right: -15px;
+    padding: 18px 20px;
+  }
+
+  .overlay > p {
+    font-size: 24px;
+  }
+
+  .overlay > p > span {
+    font-size: 14px;
+  }
+
+  .companies-section {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .header-section {
+    top: 10px;
+  }
+
+  .header-section > div > div > div {
+    padding: 20px;
+  }
+
+  .properties-section-content-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bottom-img1 {
+    width: 50%;
+  }
+
+  .services-content {
+    margin-top: 60px;
+  }
+
+  .banner-content {
+    margin-top: 0;
+  }
+
+  .banner-content > h1 {
+    font-size: 28px;
+  }
+
+  .banner-content > p {
+    font-size: 16px;
+  }
+
+  .apartment-search {
+    top: -225px;
+  }
+
+  .apartment-content {
+    margin-top: 90px;
+  }
+
+  .testimonial-card {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    transform: none;
+    padding: 12px;
+    width: 52%;
+  }
+
+  .testimonial-card > p {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .author h4 {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  .overlay {
+    padding: 10px;
+    right: -10px;
+    top: 40%;
+  }
+
+  .bottom-img2 {
+    right: -40px;
+    width: 50%;
+    bottom: -20px;
+    border-radius: 15px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 15px;
+  }
+
+  /* About page specific mobile styles */
+  .about-section {
+    padding: 40px 0;
+  }
+
+  .about-section > div > div > div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-container {
+    max-width: 100%;
+  }
+
+  .bottom-img2 {
+    right: -30px;
+    width: 45%;
+    bottom: -15px;
+    border-radius: 12px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 12px;
+  }
+
+  .overlay {
+    right: -5px;
+    top: 35%;
+    padding: 15px 18px;
+  }
+
+  .overlay > p {
+    font-size: 20px;
+  }
+
+  .overlay > p > span {
+    font-size: 12px;
+  }
+
+  .about-section-content > h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .about-section-content > p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .text-container > h3 {
+    font-size: 18px;
+  }
+
+  .text-container > p {
+    font-size: 16px;
+  }
+
+  .stats-row {
+    gap: 20px;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .commitment-section {
+    padding: 40px 0;
+  }
+
+  .commitment-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .commitment-text-content > h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .commitment-text-content > p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .mission-vision-area {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vision-area > h4,
+  .mission-area > h4 {
+    font-size: 18px;
+  }
+
+  .vision-area > p,
+  .mission-area > p {
+    font-size: 16px;
+  }
+
+  .teams-section {
+    margin: 10px;
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .teams-section-content > h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .properties-section-cards {
+    gap: 25px;
+  }
+
+  .txt-overlay1 {
+    margin: 8px;
+    padding: 10px 15px;
+  }
+
+  .txt-overlay-content > h3 {
+    font-size: 16px;
+  }
+
+  .txt-overlay-content > p {
+    font-size: 13px;
+  }
+
+  .call-icon {
+    width: 26px;
+    height: 26px;
+    padding: 5px;
+  }
+
+  .companies-section {
+    margin: 0 10px;
+  }
+
+  .newsletter-area {
+    padding: 20px;
+  }
+
+  .newsletter-area-header > h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .newsletter-form {
+    gap: 15px;
+  }
+
+  .newsletter-input {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .subscribe-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .scrl-wrpr {
+    margin: 30px 0;
+  }
+
+  .img-item {
+    height: 40px;
+  }
+
+  .img-item img {
+    max-height: 40px;
+    width: auto;
+  }
+}
+
+/* Additional responsive styles for better mobile experience */
+@media screen and (max-width: 360px) {
+  .overlay {
+    right: 0;
+    top: 30%;
+    padding: 12px 15px;
+  }
+
+  .overlay > p {
+    font-size: 18px;
+  }
+
+  .bottom-img2 {
+    right: -20px;
+    width: 40%;
+    bottom: -10px;
+    border-radius: 10px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 10px;
+  }
+
+  .banner-content > h1 {
+    font-size: 24px;
+  }
+
+  .about-section-content > h3,
+  .commitment-text-content > h3,
+  .teams-section-content > h3 {
+    font-size: 22px;
+  }
+
+  .teams-section {
+    margin: 5px;
+    padding: 25px 15px;
+  }
+
+  .newsletter-area {
+    padding: 15px;
   }
 }

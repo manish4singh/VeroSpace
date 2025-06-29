@@ -99,5 +99,66 @@ ham.addEventListener("click", () => {
   navRight.classList.toggle("active");
 });
 
+// For Active links
+// Get all nav links
+const navLinks = document.querySelectorAll(".nav-link");
 
+// Get the current path (without trailing slash)
+const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
+
+navLinks.forEach((link) => {
+  // Get link's href as a path (remove domain if full URL)
+  const linkPath = link.getAttribute("href").replace(/\/$/, "").toLowerCase();
+
+  // Match exact route OR default to home page
+  if (
+    currentPath.endsWith(linkPath) ||
+    (linkPath === "index.html" &&
+      (currentPath === "" || currentPath === "/index.html"))
+  ) {
+    link.classList.add("active");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".testimonials-swiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (className) {
+        return '<span class="' + className + '">' + "</span>";
+      },
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      900: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Swiper(".properties-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: { slidesPerView: 1, spaceBetween: 10 },
+      700: { slidesPerView: 2, spaceBetween: 20 },
+      1024: { slidesPerView: 3, spaceBetween: 30 },
+    },
+  });
+});
 
