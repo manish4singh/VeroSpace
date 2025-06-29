@@ -11,7 +11,8 @@
     top: -125px;
   }
 
-  .divider2{
+  .divider2,
+  .testimonial-card > span {
     display: none;
   }
 
@@ -19,9 +20,14 @@
   .form-row:first-child,
   .form-row:last-child,
   .about-section > div > div > div,
-  .services-content {
+  .services-content,
+  .stats-row {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+  .slider-container {
+    width: 100%;
   }
 }
 
@@ -35,28 +41,52 @@
     display: block;
   }
   .col-10,
-  .col-6,.col-2,.col-5,.col-4 {
+  .col-6,
+  .col-2,
+  .col-5,
+  .col-4 {
     width: 100% !important;
   }
-  .footer-content,.newsletter-area,.newsletter-form,.apartment-type-cards{
+  .footer-content,
+  .newsletter-area,
+  .newsletter-form,
+  .apartment-type-cards {
     flex-direction: column;
     gap: 30px;
   }
 
-  .form-row:first-child > .form-group:first-child,.form-row:first-child > .form-group:nth-child(2),.form-row:first-child > .form-group:nth-child(3),.form-row:last-child > .form-group:first-child,.form-row:last-child > .form-group:nth-child(3){
+  .form-row:first-child > .form-group:first-child,
+  .form-row:first-child > .form-group:nth-child(2),
+  .form-row:first-child > .form-group:nth-child(3),
+  .form-row:last-child > .form-group:first-child,
+  .form-row:last-child > .form-group:nth-child(3) .form-row > .slider-container,
+  .form-row > .room-type {
     width: 100%;
   }
 
-  .header-section > div > div > div{
+  .header-section > div > div > div {
     flex-direction: row-reverse;
   }
-
-  
-
-
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 426px) and (max-width: 700px) {
+  .header-section {
+    top: 15px;
+  }
+
+  .header-section > div > div > div{
+    padding: 20px;
+  }
+
+  .header-section > div > div > div
+  .banner-content {
+    margin-top: 30px;
+  }
+
+  .banner-content > h1 {
+    font-size: 32px;
+  }
+
   .testimonial-swiper > .swiper-wrapper > .swiper-slide,
   .testimonials1,
   .testimonials2 {
@@ -71,7 +101,56 @@
   .testimonial-card {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 10px;
+    right: 10px;
     transform: none;
+    padding: 12px;
+    width: 80%;
+  }
+
+  .testimonial-card > p {
+    font-size: 13px;
+    line-height: 120%;
+  }
+  .author h4 {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .header-section {
+    top: 10px;
+  }
+
+  .header-section > div > div > div{
+    padding: 20px;
+  }
+
+  .properties-section-content-header {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bottom-img1 {
+    width: 50%;
+  }
+  .services-content {
+    margin-top: 60px;
+  }
+  .banner-content {
+    margin-top: 0;
+  }
+  .banner-content > h1 {
+    font-size: 28px;
+  }
+  .banner-content > p {
+    font-size: 16px;
+  }
+  .apartment-search {
+    top: -225px;
+  }
+  .apartment-content {
+    margin-top: 90px;
   }
 }

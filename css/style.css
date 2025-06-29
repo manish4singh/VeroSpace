@@ -471,7 +471,7 @@ a:hover {
 .range-slider {
   position: relative;
   height: 6px;
-  background: #e4e4e4;
+  background: var(--color-off-white-2);
   border-radius: 3px;
 }
 
@@ -509,7 +509,7 @@ input[type="range"]::-webkit-slider-thumb {
 .price-label {
   position: absolute;
   top: 15px;
-  background: #6a0dad;
+  background: var(--color-primary);
   color: white;
   padding: 5px 10px;
   border-radius: 10px;
@@ -589,12 +589,13 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .price-label {
-  background: #667eea;
+  background: var(--color-primary);
   color: white;
   padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
+  border-radius: 8.76px;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Lato',sans-serif;
 }
 
 .btn-search {
@@ -651,6 +652,7 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   flex-direction: row;
   margin-top: 47px;
+  width: 100%;
 }
 
 .commercial,
@@ -1001,13 +1003,14 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  width: 100%;
 }
 
 .txt-overlay-row2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .txt-overlay-row1 > h3 {
@@ -1023,7 +1026,6 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
 }
 
 .rating-icon,
@@ -1270,7 +1272,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .testimonial-card {
-  width: 340px;
+  max-width: 340px;
   background: white;
   padding: 17px 37px 29px 42px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
