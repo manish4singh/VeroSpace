@@ -1,22 +1,21 @@
 //  For Select elements
-
 const selectElement = document.getElementById("property-for");
 const labelElement = document.getElementById("property-label");
 
-selectElement.addEventListener("focus", () => {
-  labelElement.textContent = "Please choose Rent or Buy";
-});
+if (selectElement && labelElement) {
+  selectElement.addEventListener("focus", () => {
+    labelElement.textContent = "Please choose Rent or Buy";
+  });
 
-// Optional: update label when a value is selected
-selectElement.addEventListener("change", () => {
-  const selectedValue = selectElement.value;
-  labelElement.textContent = `You selected: ${
-    selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1)
-  }`;
-});
+  selectElement.addEventListener("change", () => {
+    const selectedValue = selectElement.value;
+    labelElement.textContent = `You selected: ${
+      selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1)
+    }`;
+  });
+}
 
 //   Price Slider
-
 const minRange = document.getElementById("min-range");
 const maxRange = document.getElementById("max-range");
 const track = document.getElementById("track");
@@ -24,10 +23,9 @@ const minLabel = document.getElementById("min-label");
 const maxLabel = document.getElementById("max-label");
 
 function updateSlider() {
-  let minVal = parseInt(minRange.value);
-  let maxVal = parseInt(maxRange.value);
+  let minVal = Number.parseInt(minRange.value);
+  let maxVal = Number.parseInt(maxRange.value);
 
-  // Prevent crossing
   if (maxVal - minVal < 1000) {
     if (event.target === minRange) {
       minRange.value = maxVal - 1000;
@@ -36,10 +34,9 @@ function updateSlider() {
     }
   }
 
-  minVal = parseInt(minRange.value);
-  maxVal = parseInt(maxRange.value);
+  minVal = Number.parseInt(minRange.value);
+  maxVal = Number.parseInt(maxRange.value);
 
-  const rangeWidth = minRange.offsetWidth;
   const minPercent = (minVal / 20000) * 100;
   const maxPercent = (maxVal / 20000) * 100;
 
@@ -55,22 +52,20 @@ function updateSlider() {
   maxLabel.style.left = `${(maxVal / 20000) * containerWidth}px`;
 }
 
-minRange.addEventListener("input", updateSlider);
-maxRange.addEventListener("input", updateSlider);
-
-// Initialize positions
-updateSlider();
+if (minRange && maxRange) {
+  minRange.addEventListener("input", updateSlider);
+  maxRange.addEventListener("input", updateSlider);
+  updateSlider();
+}
 
 //   For Counter
-
 function animateCounter(element, target, duration = 1500) {
-  let start = 0;
+  const start = 0;
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
     const value = Math.floor(progress * (target - start) + start);
-    // Format as "15K+"
     element.textContent =
       value >= 1000 ? Math.round(value / 1000) + "K+" : value + "+";
     if (progress < 1) {
@@ -82,35 +77,12 @@ function animateCounter(element, target, duration = 1500) {
   window.requestAnimationFrame(step);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  animateCounter(document.getElementById("trustedCustomers"), 15000, 1200);
-  animateCounter(document.getElementById("housesSold"), 20000, 1400);
-  animateCounter(document.getElementById("propertyListed"), 75000, 1600);
-});
-
-//   For JS Hamburger
-
-const navLeft = document.querySelector(".nav-left");
-const navRight = document.querySelector(".nav-right");
-const ham = document.querySelector(".menu");
-
-ham.addEventListener("click", () => {
-  navLeft.classList.toggle("active");
-  navRight.classList.toggle("active");
-});
-
 // For Active links
-// Get all nav links
 const navLinks = document.querySelectorAll(".nav-link");
-
-// Get the current path (without trailing slash)
 const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
 
 navLinks.forEach((link) => {
-  // Get link's href as a path (remove domain if full URL)
   const linkPath = link.getAttribute("href").replace(/\/$/, "").toLowerCase();
-
-  // Match exact route OR default to home page
   if (
     currentPath.endsWith(linkPath) ||
     (linkPath === "index.html" &&
@@ -120,45 +92,129 @@ navLinks.forEach((link) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  new Swiper(".testimonials-swiper", {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (className) {
-        return '<span class="' + className + '">' + "</span>";
-      },
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      900: {
+// HAMBURGER MENU - SIMPLE VERSION
+function initHamburgerMenu() {
+  console.log("Initializing hamburger menu...");
+
+  const hamburger = document.querySelector(".menu");
+  const mobileOverlay = document.querySelector(".mobile-overlay");
+  const closeBtn = document.querySelector(".close-menu");
+  const menuLinks = document.querySelectorAll(".mobile-menu-content a");
+
+  console.log("Elements found:", {
+    hamburger: !!hamburger,
+    mobileOverlay: !!mobileOverlay,
+    closeBtn: !!closeBtn,
+    menuLinksCount: menuLinks.length,
+  });
+
+  if (!hamburger || !mobileOverlay) {
+    console.error("Required elements not found!");
+    return;
+  }
+
+  // Toggle menu function
+  function toggleMenu() {
+    hamburger.classList.toggle("open");
+    mobileOverlay.classList.toggle("active");
+    console.log(
+      "Menu toggled - is open:",
+      mobileOverlay.classList.contains("active")
+    );
+  }
+
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", (e) => {
+    e.preventDefault();
+    toggleMenu();
+  });
+
+  // Close menu when close button is clicked
+  if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      toggleMenu();
+    });
+  }
+
+  // Close menu when clicking links
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      toggleMenu();
+    });
+  });
+
+  console.log("Hamburger menu initialized successfully!");
+}
+
+// Initialize hamburger menu
+initHamburgerMenu();
+
+// Initialize everything when DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM Content Loaded!");
+
+  // Counter animation
+  const trustedCustomers = document.getElementById("trustedCustomers");
+  const housesSold = document.getElementById("housesSold");
+  const propertyListed = document.getElementById("propertyListed");
+
+  if (trustedCustomers) animateCounter(trustedCustomers, 15000, 1200);
+  if (housesSold) animateCounter(housesSold, 20000, 1400);
+  if (propertyListed) animateCounter(propertyListed, 75000, 1600);
+
+  // Swiper initialization
+  const Swiper = window.Swiper; // Declare Swiper variable here
+  if (typeof Swiper !== "undefined") {
+    // Testimonials Swiper
+    const testimonialsSwiper = document.querySelector(".testimonials-swiper");
+    if (testimonialsSwiper) {
+      new Swiper(".testimonials-swiper", {
         slidesPerView: 2,
         spaceBetween: 30,
-      },
-    },
-  });
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          900: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        },
+      });
+    }
+
+    // Properties Swiper
+    const propertiesSwiper = document.querySelector(".properties-swiper");
+    if (propertiesSwiper) {
+      new Swiper(".properties-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          0: { slidesPerView: 1, spaceBetween: 10 },
+          700: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        },
+      });
+    }
+  }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  new Swiper(".properties-swiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: { slidesPerView: 1, spaceBetween: 10 },
-      700: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 3, spaceBetween: 30 },
-    },
-  });
-});
-
+// Fallback - try to initialize after a short delay if DOM event doesn't fire
+setTimeout(() => {
+  if (document.readyState === "complete") {
+    console.log("Fallback initialization...");
+    initHamburgerMenu();
+  }
+}, 1000);

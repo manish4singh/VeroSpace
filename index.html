@@ -25,6 +25,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    
+
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
@@ -35,6 +37,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
+            <!-- Hamburger Menu button -->
+            <div class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
             <nav class="nav-left">
               <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -45,7 +53,7 @@
               </ul>
             </nav>
             <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="" />
+              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
             </a>
             <nav class="nav-right">
               <ul>
@@ -58,13 +66,24 @@
               </ul>
             </nav>
 
-            <div class="menu">
-              <span></span>
-              <span></span>
-              <span></span>
+            <div class="mobile-overlay">
+              <button class="close-menu">×</button>
+              <div class="mobile-menu-content">
+                <ul>
+                  <li><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="about.html" class="nav-link">About Us</a></li>
+                  <li>
+                    <a href="properties.html" class="nav-link">Properties</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact us</a>
+                  </li>
+                  <li>
+                    <a class="btn-login" href="#">Login</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-            
           </div>
         </div>
       </div>
@@ -1112,7 +1131,7 @@
         </div>
       </div>
     </section>
-    
+
     <footer class="footer-section">
       <div class="container">
         <div class="row">
@@ -1205,7 +1224,8 @@
       </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" defer></script>
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Splide JS -->
