@@ -127,6 +127,7 @@
   }
 
   .close-menu {
+    display: none;
     position: absolute;
     top: 20px;
     right: 30px;

@@ -92,63 +92,26 @@ navLinks.forEach((link) => {
   }
 });
 
-// HAMBURGER MENU - SIMPLE VERSION
-function initHamburgerMenu() {
-  console.log("Initializing hamburger menu...");
-
+document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".menu");
   const mobileOverlay = document.querySelector(".mobile-overlay");
   const closeBtn = document.querySelector(".close-menu");
   const menuLinks = document.querySelectorAll(".mobile-menu-content a");
 
-  console.log("Elements found:", {
-    hamburger: !!hamburger,
-    mobileOverlay: !!mobileOverlay,
-    closeBtn: !!closeBtn,
-    menuLinksCount: menuLinks.length,
-  });
-
   if (!hamburger || !mobileOverlay) {
-    console.error("Required elements not found!");
+    console.error("Hamburger or overlay not found!");
     return;
   }
 
-  // Toggle menu function
   function toggleMenu() {
     hamburger.classList.toggle("open");
     mobileOverlay.classList.toggle("active");
-    console.log(
-      "Menu toggled - is open:",
-      mobileOverlay.classList.contains("active")
-    );
   }
 
-  // Toggle menu when hamburger is clicked
-  hamburger.addEventListener("click", (e) => {
-    e.preventDefault();
-    toggleMenu();
-  });
-
-  // Close menu when close button is clicked
-  if (closeBtn) {
-    closeBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      toggleMenu();
-    });
-  }
-
-  // Close menu when clicking links
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      toggleMenu();
-    });
-  });
-
-  console.log("Hamburger menu initialized successfully!");
-}
-
-// Initialize hamburger menu
-initHamburgerMenu();
+  hamburger.addEventListener("click", toggleMenu);
+  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
+  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+});
 
 // Initialize everything when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
