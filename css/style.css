@@ -262,7 +262,7 @@ a:hover {
   max-width: 600px;
 }
 
-.apartment-search {
+.floating-search {
   display: flex;
   justify-content: center;
   align-items: center;

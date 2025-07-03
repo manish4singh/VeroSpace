@@ -67,7 +67,7 @@
   vertical-align: middle;
 }
 
-.property-search {
+.floating-search {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -442,6 +442,8 @@ input[type="range"]::-webkit-slider-thumb {
   align-self: start;
 }
 
+
+
 .floating-filter-btn {
   display: none;
   position: fixed;
@@ -514,6 +516,8 @@ input[type="range"]::-webkit-slider-thumb {
 .property-amenities-list {
   list-style: none;
 }
+
+
 
 .property-amenity-item {
   display: flex;
@@ -707,6 +711,9 @@ input[type="checkbox"] {
 .close-btn:hover {
   color: #000;
 }
+
+
+
 
 .property-apply-btn {
   width: 100%;
@@ -921,38 +928,4 @@ input[type="checkbox"] {
   background: #5856eb;
 }
 
-.slider-container,
-.range-slider {
-  width: 100%;
-  max-width: 400px;
-  min-width: 180px;
-}
-@media (max-width: 600px) {
-  .slider-container,
-  .range-slider {
-    max-width: 100%;
-    min-width: 120px;
-  }
-}
 
-.price-label,
-.slider-display {
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 10;
-  max-width: 90px;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  background: var(--color-primary);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 10px;
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
-  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.4);
-  position: absolute;
-  top: 15px;
-  transform: none !important; /* We'll handle centering in JS */
-}

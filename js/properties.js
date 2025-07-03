@@ -212,19 +212,9 @@ class DualThumbSlider {
     this.range.style.left = minPercent + "%";
     this.range.style.width = maxPercent - minPercent + "%";
 
-    // Responsive label positioning in px
-    const sliderWidth = this.slider.offsetWidth;
-    const minLabelWidth = this.minDisplayEl.offsetWidth;
-    const maxLabelWidth = this.maxDisplayEl.offsetWidth;
-
-    // Clamp label within slider container
-    let minLeftPx = (minPercent / 100) * sliderWidth - minLabelWidth / 2;
-    minLeftPx = Math.max(0, Math.min(minLeftPx, sliderWidth - minLabelWidth));
-    this.minDisplayEl.style.left = minLeftPx + "px";
-
-    let maxLeftPx = (maxPercent / 100) * sliderWidth - maxLabelWidth / 2;
-    maxLeftPx = Math.max(0, Math.min(maxLeftPx, sliderWidth - maxLabelWidth));
-    this.maxDisplayEl.style.left = maxLeftPx + "px";
+    // Update display positions and values
+    this.minDisplayEl.style.left = minPercent + "%";
+    this.maxDisplayEl.style.left = maxPercent + "%";
 
     // Update display values
     if (this.config.isPrice) {
@@ -315,54 +305,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-// ...existing code...
-
-// Utility for classic range slider (for the top search form)
-function updatePriceLabelPosition(sliderId, labelId) {
-  const slider = document.getElementById(sliderId);
-  const label = document.getElementById(labelId);
-  const container = slider?.parentElement;
-  if (!slider || !label || !container) return;
-
-  const sliderWidth = container.offsetWidth;
-  const min = parseInt(slider.min, 10);
-  const max = parseInt(slider.max, 10);
-  const value = parseInt(slider.value, 10);
-  const percent = (value - min) / (max - min);
-
-  const thumbWidth = 16; // matches CSS thumb size
-  const labelWidth = label.offsetWidth;
-
-  let left = percent * (sliderWidth - thumbWidth) + thumbWidth / 2;
-  left = left - labelWidth / 2;
-  left = Math.max(0, Math.min(left, sliderWidth - labelWidth));
-
-  label.style.left = left + "px";
-}
-
-function updateClassicRangeLabels() {
-  updatePriceLabelPosition("min-range", "min-label");
-  updatePriceLabelPosition("max-range", "max-label");
-}
-
-// Attach listeners for the classic range slider
-document.addEventListener("DOMContentLoaded", () => {
-  // ...existing code...
-
-  // Classic dual range slider (top search form)
-  const minRange = document.getElementById("min-range");
-  const maxRange = document.getElementById("max-range");
-  if (minRange && maxRange) {
-    minRange.addEventListener("input", updateClassicRangeLabels);
-    maxRange.addEventListener("input", updateClassicRangeLabels);
-    window.addEventListener("resize", updateClassicRangeLabels);
-    updateClassicRangeLabels();
-  }
-});
-
-// --- MODIFIED DualThumbSlider updateSlider() ---
-
-// In the DualThumbSlider class, replace updateSlider with:
-
-// ...rest of your code...
