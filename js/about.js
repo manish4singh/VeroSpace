@@ -47,3 +47,27 @@ document.addEventListener("DOMContentLoaded", () => {
   animateCounter(document.getElementById("housesSold"), 20000, 1400);
   animateCounter(document.getElementById("propertyListed"), 75000, 1600);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".menu");
+  const mobileOverlay = document.querySelector(".mobile-overlay");
+  const closeBtn = document.querySelector(".close-menu");
+  const menuLinks = document.querySelectorAll(".mobile-menu-content a");
+
+  if (!hamburger || !mobileOverlay) {
+    console.error("Hamburger or overlay not found!");
+    return;
+  }
+
+  function toggleMenu() {
+    hamburger.classList.toggle("open");
+    mobileOverlay.classList.toggle("active");
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
+  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+});
+
+
+

@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us : VeroSpace</title>
-    <!-- css link -->
-    <link rel="stylesheet" href="./css/pages/contact-us.css" />
     <!-- fontawesome link -->
     <link
       rel="stylesheet"
@@ -31,6 +29,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
     <link rel="stylesheet" href="./css/pages/about-us.css" />
+    <link rel="stylesheet" href="./css/pages/contact-us.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -59,10 +58,10 @@
             <nav class="nav-right">
               <ul>
                 <li>
-                  <a href="#">Contact us</a>
+                  <a href="contact-us.html" class="nav-link">Contact us</a>
                 </li>
                 <li>
-                  <a class="btn-login" href="#">Login</a>
+                  <a class="btn-login" id="loginBtn" href="#">Login</a>
                 </li>
               </ul>
             </nav>
@@ -77,10 +76,10 @@
                     <a href="properties.html" class="nav-link">Properties</a>
                   </li>
                   <li>
-                    <a href="#">Contact us</a>
+                    <a href="contact-us.html">Contact us</a>
                   </li>
                   <li>
-                    <a class="btn-login" href="#">Login</a>
+                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
                   </li>
                 </ul>
               </div>
@@ -262,8 +261,10 @@
                         sed gravida velit in nibh. Tortor sed quis arcu risus
                         sollicitudin lacus donec in commodo.
                       </p>
-                      <p>Lorem ipsum dolor sit amet consectetur. Et eget massa sed
-                      gravida velit in nibh.</p>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur. Et eget massa
+                        sed gravida velit in nibh.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -497,6 +498,88 @@
         </div>
       </div>
     </footer>
+    <footer class="subfooter-seection">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="subfooter-content">
+              <div class="subfooter-content-left">
+                <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
+              </div>
+              <div class="subfooter-content-right">
+                <a href="#">Term of Service</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <button class="close-modal" id="closeLoginModal">&times;</button>
+        <h2>User Login</h2>
+        <p>Hey, enter your detail to get login<br />to your account</p>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <input type="text" placeholder="username" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="password" required />
+          </div>
+          <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="modal-btn">LOGIN</button>
+          <div class="switch-modal">
+            You don't have an account?
+            <a href="#" id="switchToRegister">Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="registerModal">
+      <div class="modal">
+        <button class="close-modal" id="closeRegisterModal">&times;</button>
+        <h2>Create an Account</h2>
+        <p>Fill up details below to get register</p>
+
+        <form id="registerForm">
+          <div class="form-rowss">
+            <div class="form-group">
+              <input type="text" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last name" required />
+            </div>
+          </div>
+          <div class="form-rowss">
+            <div class="form-group">
+              <input type="tel" placeholder="Phone" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Confirm password" required />
+          </div>
+          <div class="terms-text">
+            By create an account accept our <a href="#">Terms & Conditions</a>
+          </div>
+          <button type="submit" class="modal-btn">REGISTER</button>
+          <div class="switch-modal">
+            Already have an account?
+            <a href="#" id="switchToLogin">Login here</a>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/contact-us.js"></script>

@@ -22,6 +22,23 @@ const track = document.getElementById("track");
 const minLabel = document.getElementById("min-label");
 const maxLabel = document.getElementById("max-label");
 
+function showLabels() {
+  minLabel.classList.add("show-label");
+  maxLabel.classList.add("show-label");
+}
+function hideLabels() {
+  minLabel.classList.remove("show-label");
+  maxLabel.classList.remove("show-label");
+}
+
+[minRange, maxRange].forEach((input) => {
+  input.addEventListener("mousedown", showLabels);
+  input.addEventListener("touchstart", showLabels);
+  input.addEventListener("mouseup", hideLabels);
+  input.addEventListener("touchend", hideLabels);
+  input.addEventListener("mouseleave", hideLabels);
+});
+
 function updateSlider() {
   let minVal = Number.parseInt(minRange.value);
   let maxVal = Number.parseInt(maxRange.value);
@@ -127,14 +144,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (propertyListed) animateCounter(propertyListed, 75000, 1600);
 
   // Swiper initialization
-  const Swiper = window.Swiper; // Declare Swiper variable here
+  const Swiper = window.Swiper;
   if (typeof Swiper !== "undefined") {
-    // Testimonials Swiper
     const testimonialsSwiper = document.querySelector(".testimonials-swiper");
     if (testimonialsSwiper) {
       new Swiper(".testimonials-swiper", {
-        slidesPerView: 2,
-        spaceBetween: 30,
         loop: true,
         pagination: {
           el: ".swiper-pagination",
@@ -144,16 +158,42 @@ document.addEventListener("DOMContentLoaded", () => {
           0: {
             slidesPerView: 1,
             spaceBetween: 10,
+            centeredSlides: true,
           },
-          900: {
-            slidesPerView: 2,
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            centeredSlides: true,
+          },
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            centeredSlides: true,
+          },
+          768: {
+            slidesPerView: 1,
             spaceBetween: 30,
+            centeredSlides: true,
+          },
+          992: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            centeredSlides: false,
+          },
+          1200: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+            centeredSlides: false,
+          },
+          1440: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+            centeredSlides: false,
           },
         },
       });
     }
 
-    // Properties Swiper
     const propertiesSwiper = document.querySelector(".properties-swiper");
     if (propertiesSwiper) {
       new Swiper(".properties-swiper", {
@@ -181,3 +221,93 @@ setTimeout(() => {
     initHamburgerMenu();
   }
 }, 1000);
+
+const loginBtn = document.getElementById("loginBtn");
+const mobileLoginBtn = document.getElementById("mobileLoginBtn");
+const loginModal = document.getElementById("loginModal");
+const registerModal = document.getElementById("registerModal");
+const closeLoginModal = document.getElementById("closeLoginModal");
+const closeRegisterModal = document.getElementById("closeRegisterModal");
+const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+const switchToRegister = document.getElementById("switchToRegister");
+const switchToLogin = document.getElementById("switchToLogin");
+
+// Open login modal
+function openLoginModal() {
+  loginModal.classList.add("active");
+  // Close mobile nav if open
+  mobileNav.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  openLoginModal();
+});
+
+mobileLoginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  openLoginModal();
+});
+
+// Close modals
+closeLoginModal.addEventListener("click", () => {
+  loginModal.classList.remove("active");
+});
+
+closeRegisterModal.addEventListener("click", () => {
+  registerModal.classList.remove("active");
+});
+
+// Close modal when clicking outside
+loginModal.addEventListener("click", (e) => {
+  if (e.target === loginModal) {
+    loginModal.classList.remove("active");
+  }
+});
+
+registerModal.addEventListener("click", (e) => {
+  if (e.target === registerModal) {
+    registerModal.classList.remove("active");
+  }
+});
+
+// Switch between modals
+forgotPasswordLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginModal.classList.remove("active");
+  registerModal.classList.add("active");
+});
+
+switchToRegister.addEventListener("click", (e) => {
+  e.preventDefault();
+  loginModal.classList.remove("active");
+  registerModal.classList.add("active");
+});
+
+switchToLogin.addEventListener("click", (e) => {
+  e.preventDefault();
+  registerModal.classList.remove("active");
+  loginModal.classList.add("active");
+});
+
+// Form submissions
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Login form submitted!");
+  // Add your login logic here
+});
+
+document.getElementById("registerForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Registration form submitted!");
+  // Add your registration logic here
+});
+
+// Close modals with Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    loginModal.classList.remove("active");
+    registerModal.classList.remove("active");
+  }
+});

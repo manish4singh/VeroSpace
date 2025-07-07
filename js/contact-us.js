@@ -32,3 +32,49 @@ document.addEventListener("keydown", function (e) {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Debug output to make sure JS is running
+  console.log("✅ JS is running");
+
+  const navLinks = document.querySelectorAll(".nav-link");
+  console.log("Found", navLinks.length, "nav-link(s)");
+
+  const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+  console.log("Current page:", currentPage);
+
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href").toLowerCase();
+    console.log("Comparing", href, "to", currentPage);
+
+    if (
+      currentPage === href ||
+      (href === "index.html" &&
+        (currentPage === "" || currentPage === "index.html"))
+    ) {
+      link.classList.add("active");
+      console.log("✅ Added .active to:", href);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".menu");
+  const mobileOverlay = document.querySelector(".mobile-overlay");
+  const closeBtn = document.querySelector(".close-menu");
+  const menuLinks = document.querySelectorAll(".mobile-menu-content a");
+
+  if (!hamburger || !mobileOverlay) {
+    console.error("Hamburger or overlay not found!");
+    return;
+  }
+
+  function toggleMenu() {
+    hamburger.classList.toggle("open");
+    mobileOverlay.classList.toggle("active");
+  }
+
+  hamburger.addEventListener("click", toggleMenu);
+  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
+  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+});

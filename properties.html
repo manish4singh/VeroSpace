@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      xintegrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -39,7 +39,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="menu">
+            <!-- Hamburger Menu button -->
+            <div class="menu" id="menu">
               <span></span>
               <span></span>
               <span></span>
@@ -54,21 +55,21 @@
               </ul>
             </nav>
             <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="" />
+              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
             </a>
             <nav class="nav-right">
               <ul>
                 <li>
-                  <a href="contact-us.html">Contact us</a>
+                  <a href="contact-us.html" class="nav-link">Contact us</a>
                 </li>
                 <li>
-                  <a class="btn-login" href="#">Login</a>
+                  <a class="btn-login" id="loginBtn" href="#">Login</a>
                 </li>
               </ul>
             </nav>
 
             <div class="mobile-overlay">
-              <button class="close-menu">X</button>
+              <button class="close-menu">×</button>
               <div class="mobile-menu-content">
                 <ul>
                   <li><a href="index.html" class="nav-link">Home</a></li>
@@ -80,7 +81,7 @@
                     <a href="contact-us.html">Contact us</a>
                   </li>
                   <li>
-                    <a class="btn-login" href="#">Login</a>
+                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
                   </li>
                 </ul>
               </div>
@@ -106,7 +107,8 @@
                 Properties
               </p>
             </div>
-            <div class="floating-search">
+
+            <div class="floating-search1">
               <div class="form-area">
                 <form action="">
                   <div class="form-row">
@@ -217,31 +219,10 @@
         <div class="row">
           <div class="col-12">
             <div class="properties-details-content">
-              <div class="filter-overlay" id="filterOverlay"></div>
-              <button class="floating-filter-btn" id="openFilterBtn">
-                Filter
-              </button>
-
               <div class="col-3">
                 <div class="property-sidebar-form" id="propertySidebarForm">
                   <form id="propertyFilterForm">
-                    <!-- Close button for mobile -->
-                    <button
-                      type="button"
-                      class="close-btn"
-                      style="
-                        position: absolute;
-                        top: 10px;
-                        right: 15px;
-                        background: none;
-                        border: none;
-                        font-size: 24px;
-                        cursor: pointer;
-                      "
-                    >
-                      &times;
-                    </button>
-
+                    <!-- This form is hidden on mobile -->
                     <div class="property-filter-group">
                       <label for="propertyCountry" class="property-filter-label"
                         >Country</label
@@ -385,7 +366,6 @@
                         <div class="slider-range"></div>
                         <div class="slider-thumb" data-thumb="min"></div>
                         <div class="slider-thumb" data-thumb="max"></div>
-                        <!-- Display elements will be created by JavaScript -->
                       </div>
                     </div>
 
@@ -396,7 +376,6 @@
                         <div class="slider-range"></div>
                         <div class="slider-thumb" data-thumb="min"></div>
                         <div class="slider-thumb" data-thumb="max"></div>
-                        <!-- Display elements will be created by JavaScript -->
                       </div>
                     </div>
 
@@ -405,7 +384,100 @@
                     </button>
                   </form>
                 </div>
+
+                <!-- Dropdown Filters for Mobile -->
+                <div id="propertyDropdownFilters">
+                  <!-- Country Filter -->
+                  <div class="filter-dropdown-group">
+                    <select
+                      id="dropdownCountry"
+                      class="property-select-dropdown"
+                      required
+                    >
+                      <option value="">Select Country</option>
+                      <option value="india" selected>India</option>
+                      <option value="usa">USA</option>
+                      <option value="uk">UK</option>
+                    </select>
+                  </div>
+                  <!-- City Filter -->
+                  <div class="filter-dropdown-group">
+                    <select
+                      id="dropdownCity"
+                      class="property-select-dropdown"
+                      required
+                    >
+                      <option value="">Select City</option>
+                      <option value="gurgaon">Gurgaon</option>
+                      <option value="delhi">Delhi</option>
+                      <option value="mumbai">Mumbai</option>
+                    </select>
+                  </div>
+                  <!-- Property Category Filter -->
+                  <div class="filter-dropdown-group">
+                    <select
+                      id="dropdownCategory"
+                      class="property-select-dropdown"
+                      required
+                    >
+                      <option value="">Select Category</option>
+                      <option value="apartment">Apartment</option>
+                      <option value="villa">Villa</option>
+                      <option value="house">House</option>
+                    </select>
+                  </div>
+                  <!-- Amenities Filter -->
+                  <div class="filter-dropdown-group">
+                    <button
+                      class="dropdown-toggle"
+                      onclick="toggleDropdown('amenitiesDropdown')"
+                    >
+                      Amenities <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="amenitiesDropdown">
+                      <label
+                        ><input type="checkbox" value="supermarket" /> Near
+                        Super Market</label
+                      >
+                      <label
+                        ><input type="checkbox" value="hospital" /> Near
+                        Hospital</label
+                      >
+                      <label
+                        ><input type="checkbox" value="internet" />
+                        Internet</label
+                      >
+                      <label
+                        ><input type="checkbox" value="kidzones" /> Kid
+                        Zones</label
+                      >
+                    </div>
+                  </div>
+                  <!-- Bedrooms Filter -->
+                  <div class="filter-dropdown-group">
+                    <button
+                      class="dropdown-toggle"
+                      onclick="toggleDropdown('bedroomDropdown')"
+                    >
+                      Bedrooms <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="bedroomDropdown">
+                      <label><input type="checkbox" value="1" /> Room 1</label>
+                      <label><input type="checkbox" value="2" /> Room 2</label>
+                      <label><input type="checkbox" value="3" /> Room 3</label>
+                      <label><input type="checkbox" value="4" /> Room 4</label>
+                      <label><input type="checkbox" value="5" /> Room 5</label>
+                      <label><input type="checkbox" value="6" /> Room 6</label>
+                      <label><input type="checkbox" value="7" /> Room 7</label>
+                    </div>
+                  </div>
+                  <!-- Apply Button -->
+                  <button class="property-apply-btn" style="margin-top: 12px">
+                    Apply Filters
+                  </button>
+                </div>
               </div>
+
               <div class="col-9">
                 <div class="property-listings-grid">
                   <!-- Property 1 -->
@@ -1110,19 +1182,88 @@
       </div>
     </footer>
 
-    <section class="copyright">
+    <footer class="subfooter-seection">
       <div class="container">
         <div class="row">
-          <div class="copy-left">
-            <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
-          </div>
-          <div class="copy-right">
-            <a href="#">Term of Service</a>
-            <a href="#">Privacy Policy</a>
+          <div class="col-12">
+            <div class="subfooter-content">
+              <div class="subfooter-content-left">
+                <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
+              </div>
+              <div class="subfooter-content-right">
+                <a href="#">Term of Service</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </footer>
+    <div class="modal-overlay" id="loginModal">
+      <div class="modal">
+        <button class="close-modal" id="closeLoginModal">&times;</button>
+        <h2>User Login</h2>
+        <p>Hey, enter your detail to get login<br />to your account</p>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <input type="text" placeholder="username" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="password" required />
+          </div>
+          <div class="forgot-password">
+            <a href="#" id="forgotPasswordLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="modal-btn">LOGIN</button>
+          <div class="switch-modal">
+            You don't have an account?
+            <a href="#" id="switchToRegister">Create an account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="registerModal">
+      <div class="modal">
+        <button class="close-modal" id="closeRegisterModal">&times;</button>
+        <h2>Create an Account</h2>
+        <p>Fill up details below to get register</p>
+
+        <form id="registerForm">
+          <div class="form-rowss">
+            <div class="form-group">
+              <input type="text" placeholder="First name" required />
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Last name" required />
+            </div>
+          </div>
+          <div class="form-rowss">
+            <div class="form-group">
+              <input type="tel" placeholder="Phone" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Confirm password" required />
+          </div>
+          <div class="terms-text">
+            By create an account accept our <a href="#">Terms & Conditions</a>
+          </div>
+          <button type="submit" class="modal-btn">REGISTER</button>
+          <div class="switch-modal">
+            Already have an account?
+            <a href="#" id="switchToLogin">Login here</a>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/properties.js"></script>
