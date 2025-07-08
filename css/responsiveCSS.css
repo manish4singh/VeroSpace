@@ -623,4 +623,7 @@
     flex-direction: column;
     gap: 15px;
   }
+  .form-row1{
+    flex-direction: column;
+  }
 }
