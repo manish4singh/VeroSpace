@@ -7,13 +7,6 @@
   padding-block: 75px;
 }
 
-.get-in-touch-section > div > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-}
-
 .get-in-touch-content {
   max-width: 100%;
   display: flex;
@@ -25,7 +18,7 @@
   height: fit-content;
   display: flex;
   justify-content: center;
-  align-self: flex-start;
+  align-items: start;
   flex-direction: column;
 }
 
@@ -34,6 +27,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .get-in-touch-content-header > span {
@@ -52,7 +46,7 @@
 
 .get-in-touch-content-left > p {
   font-family: "Lato", sans-serif;
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--color-dark-grey-1);
   margin-top: 16px;
@@ -71,6 +65,7 @@
   align-self: start;
   flex-direction: column;
   gap: 34px;
+  width: 100%;
 }
 
 .contact-area-row {
@@ -221,7 +216,7 @@ input[type="email"]::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .faq-content {

@@ -131,9 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Initialize everything when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM Content Loaded!");
+let propertiesSwiper;
 
+document.addEventListener("DOMContentLoaded", () => {
   // Counter animation
   const trustedCustomers = document.getElementById("trustedCustomers");
   const housesSold = document.getElementById("housesSold");
@@ -146,79 +146,103 @@ document.addEventListener("DOMContentLoaded", () => {
   // Swiper initialization
   const Swiper = window.Swiper;
   if (typeof Swiper !== "undefined") {
-    const testimonialsSwiper = document.querySelector(".testimonials-swiper");
-    if (testimonialsSwiper) {
-      new Swiper(".testimonials-swiper", {
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-          },
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-          },
-          576: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            centeredSlides: true,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            centeredSlides: true,
-          },
-          992: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-            centeredSlides: false,
-          },
-          1200: {
-            slidesPerView: 2,
-            spaceBetween: 40,
-            centeredSlides: false,
-          },
-          1440: {
-            slidesPerView: 2,
-            spaceBetween: 50,
-            centeredSlides: false,
-          },
-        },
-      });
-    }
+    // Testimonials Swiper
+    // Testimonials Swiper Configuration
+    new Swiper(".testimonials-swiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // Add these properties for better responsiveness
+      grabCursor: true,
+      watchOverflow: true,
 
-    const propertiesSwiper = document.querySelector(".properties-swiper");
-    if (propertiesSwiper) {
-      new Swiper(".properties-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+      breakpoints: {
+        // Mobile devices
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true,
         },
-        breakpoints: {
-          0: { slidesPerView: 1, spaceBetween: 10 },
-          700: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 30 },
+        // Small tablets
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          centeredSlides: true,
         },
-      });
-    }
+        // Medium tablets
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+          centeredSlides: true,
+        },
+        // Desktop
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+          centeredSlides: false,
+        },
+        // Large desktop
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+          centeredSlides: false,
+        },
+      },
+    });
+
+    // Properties Swiper
+    propertiesSwiper = new Swiper(".properties-swiper", {
+      slidesPerView: 1, // 👈 Default for mobile (up to 576px)
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      preloadImages: true,
+      updateOnImagesReady: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
   }
+
+  // Fix: Update Swiper on resize
+  window.addEventListener("resize", () => {
+    if (propertiesSwiper) {
+      propertiesSwiper.update();
+    }
+  });
 });
 
-// Fallback - try to initialize after a short delay if DOM event doesn't fire
 setTimeout(() => {
   if (document.readyState === "complete") {
     console.log("Fallback initialization...");
     initHamburgerMenu();
   }
 }, 1000);
-

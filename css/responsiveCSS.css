@@ -25,11 +25,41 @@
   .floating-search {
     top: -125px;
   }
+
+  .form-row:last-child > .form-group:first-child,
+  .form-row:last-child > .form-group:last-child {
+    width: 100%;
+  }
+
+  .price-range,
+  .room-type,
+  .price-range > .currency-selector {
+    width: 100%;
+  }
+
+  .apartment-content {
+    margin-top: 300px;
+  }
+
   .floating-search1 {
     top: 340px;
     z-index: 0;
   }
 
+  .about-text-content > h3 {
+    font-size: 26px;
+  }
+  .about-text-content > p {
+    font-size: 15px;
+  }
+
+  .stat-number {
+    font-size: 22px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+  }
   .divider2,
   .testimonial-card > span {
     display: none;
@@ -37,9 +67,7 @@
 
   .form-area,
   .form-row:first-child,
-  .form-row:last-child,
-  .services-content,
-  .stats-row {
+  .form-row:last-child {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -50,7 +78,27 @@
   .get-in-touch-content {
     flex-direction: column;
     width: 100%;
+    text-align: center;
   }
+
+  .get-in-touch-content-left {
+    align-items: center !important;
+    padding-block: 20px;
+  }
+
+  .contact-area {
+    align-self: center !important;
+  }
+
+  .get-in-touch-content-left > h2 {
+    font-size: 40px !important;
+  }
+
+  .get-in-touch-content-left > p {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+
   .floating-filter-btn {
     display: none !important;
   }
@@ -79,8 +127,45 @@
   #propertySidebarForm {
     display: none;
   }
+
+  .commitment-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .txt-overlay1 {
+    padding: 8px;
+  }
+
+  .txt-overlay-content > h3 {
+    font-size: 12px;
+  }
+
+  .txt-overlay-content > p {
+    font-size: 9px;
+  }
+
+  .overlay {
+    padding: 18px;
+  }
+
+  .overlay > p {
+    font-size: 30px;
+  }
+
+  .property-apply-btn {
+    margin-top: 0 !important;
+    font-size: 11px;
+  }
+
   #propertyDropdownFilters {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .property-select-dropdown,
+  .dropdown-toggle {
+    font-size: 11px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -117,7 +202,9 @@
   }
 
   .menu {
-    display: block !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 21px;
     position: relative;
@@ -215,13 +302,11 @@
   .nav-right {
     display: none !important;
   }
-
-  .header-section > div > div > div {
-    padding: 20px;
+  .header-section > div > div {
     flex-direction: row-reverse;
+    padding: 10px;
   }
-
-  .header-section > div > div > div .banner-content {
+  .banner-content {
     margin-top: 30px;
   }
 
@@ -229,17 +314,15 @@
     font-size: 32px;
   }
 
-  .testimonial-swiper > .swiper-wrapper > .swiper-slide,
-  .testimonials1,
-  .testimonials2 {
-    width: 100vw !important;
-    min-width: 0;
-    height: auto !important;
+  .about-section {
+    margin-top: 170px;
+    margin-bottom: 50px;
   }
 
-  .testimonials-image {
-    max-width: 100vw;
-    height: 100%;
+  .services-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
   }
 
   .testimonial-card {
@@ -247,13 +330,13 @@
     right: 10px;
     padding: 12px;
     width: 80%;
-    right: -10px;
+    right: -50px;
     z-index: 999;
   }
 
   .testimonial-card > p {
-    font-size: 16px;
-    line-height: 150%;
+    font-size: 13px;
+    line-height: 13 0%;
   }
 
   .author h4 {
@@ -262,7 +345,13 @@
   }
 
   /* About page specific styles for medium screens */
-  .about-section-content > h3,
+
+  .about-text-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text-content > h3,
   .commitment-text-content > h3,
   .teams-section-content > h3 {
     font-size: 28px;
@@ -279,17 +368,21 @@
     font-size: 20px;
   }
 
+  .bottom-img2 {
+    border-radius: 15px;
+  }
+
+  .bottom-img2 > img {
+    border-radius: 15px;
+  }
+
   .overlay {
-    right: -15px;
-    padding: 18px 20px;
+    top: 45%;
+    right: 25%;
   }
 
   .overlay > p {
-    font-size: 24px;
-  }
-
-  .overlay > p > span {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .companies-section {
@@ -310,13 +403,46 @@
     font-size: 12px;
   }
 
-  .properties-section-cards{
+  .about-section-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .stats-row {
+    gap: 30px;
+  }
+
+  .teams-section-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .txt-overlay1 {
+    padding: 12px 19px 13px 20px;
+  }
+
+  .txt-overlay-content > h3 {
+    font-size: 16px;
+  }
+
+  .txt-overlay-content > p {
+    font-size: 14px;
+  }
+
+  .about-us-section-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  #propertyDropdownFilters {
     flex-direction: column;
   }
 
-  .about-section > div > div > div {
+  .footer-top,
+  .footer-bottom {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
 }
 
@@ -331,10 +457,12 @@
   .properties-section-content-header {
     flex-direction: column;
     width: 100%;
+    gap: 35px;
   }
 
   .bottom-img1 {
     width: 50%;
+    border-radius: 15px;
   }
 
   .services-content {
@@ -358,28 +486,44 @@
   }
 
   .apartment-content {
-    margin-top: 190px;
+    margin-top: 275px;
+  }
+
+  .apartment-content > h3 {
+    font-size: 26px;
+  }
+
+  .stats-row {
+    flex-direction: column;
   }
 
   .testimonial-card {
-    position: absolute;
-    right: 34px;
-    padding: 12px;
-    width: 75%;
+    max-width: calc(100vw - 80px) !important;
+    right: -20px !important;
+    padding: 12px 20px 18px 25px !important;
+    transform: translateY(-50%) !important;
+    position: absolute !important;
+  }
+
+  .testimonials1,
+  .testimonials2 {
+    max-width: 350px;
   }
 
   .testimonial-card > p {
-    font-size: 14px;
-    line-height: 120%;
+    font-size: 16px;
   }
 
   .author h4 {
-    font-size: 14px;
-    line-height: 120%;
+    font-size: 16px;
   }
 
   .author > div {
     width: 60%;
+  }
+  .star {
+    width: 10px;
+    height: 10px;
   }
 
   .overlay {
@@ -403,8 +547,6 @@
   .about-section {
     padding: 40px 0;
   }
-
-  
 
   .image-container {
     max-width: 100%;
@@ -435,13 +577,17 @@
     font-size: 12px;
   }
 
-  .about-section-content > h3 {
+  .about-section-content > h3,
+  .services-section-content > h3,
+  .properties-content-header > h3 {
     font-size: 24px;
     margin-bottom: 15px;
   }
 
-  .about-section-content > p {
-    font-size: 16px;
+  .about-section-content > p,
+  .services-section-content > p:nth-of-type(1),
+  .services-section-content > p:nth-of-type(2) {
+    font-size: 14px;
     margin-bottom: 20px;
   }
 
@@ -466,9 +612,8 @@
     padding: 40px 0;
   }
 
-  .commitment-content {
-    flex-direction: column;
-    gap: 30px;
+  .commitment-text-content {
+    text-align: center;
   }
 
   .commitment-text-content > h3 {
@@ -507,15 +652,6 @@
     margin-bottom: 30px;
   }
 
-  .properties-section-cards {
-    gap: 25px;
-  }
-
-  .txt-overlay1 {
-    margin: 8px;
-    padding: 10px 15px;
-  }
-
   .txt-overlay-content > h3 {
     font-size: 16px;
   }
@@ -539,8 +675,9 @@
   }
 
   .newsletter-area-header > h5 {
-    font-size: 18px;
+    font-size: 26px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .newsletter-form {
@@ -558,21 +695,37 @@
   }
 
   .scrl-wrpr {
-    margin: 30px 0;
+    margin: 15px 0;
   }
 
   .img-item {
-    height: 40px;
+    height: 50%;
   }
 
-  .img-item img {
-    max-height: 40px;
-    width: auto;
+  .img-item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .overlay {
-    right: 0;
-    top: 30%;
+    right: 50px;
+    top: 50%;
     padding: 12px 15px;
+  }
+
+  .testimonials-section-content > h3 {
+    font-size: 24px;
+  }
+  .companies-section-content > h5 {
+    font-size: 18px;
+    text-align: center;
+  }
+  .footer-left > p {
+    font-size: 16px;
+  }
+
+  .footer-center > ul > li > a {
+    font-size: 16px;
   }
 
   .overlay > p {
@@ -620,10 +773,25 @@
     gap: 15px;
   }
   .subfooter-content-right {
-    flex-direction: column;
     gap: 15px;
   }
-  .form-row1{
+  .form-row1 {
     flex-direction: column;
+  }
+
+  .property-btn {
+    font-size: 16px;
+  }
+
+  .testimonial-swiper > .swiper-wrapper > .swiper-slide {
+    padding-left: 40px;
+  }
+
+  .faq-question > span {
+    font-size: 14px !important;
+  }
+
+  .faq-answer-content > p {
+    font-size: 12px !important;
   }
 }

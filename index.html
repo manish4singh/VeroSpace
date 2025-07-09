@@ -13,12 +13,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Splide CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-    />
-
     <!-- Swiper CDN -->
     <link
       rel="stylesheet"
@@ -33,54 +27,52 @@
     <!-- Header Section -->
     <header class="header-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Hamburger Menu button -->
-            <div class="menu" id="menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <nav class="nav-left">
+        <div class="header-content">
+          <!-- Hamburger Menu button -->
+          <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="nav-left">
+            <ul>
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="about.html" class="nav-link">About Us</a></li>
+              <li>
+                <a href="properties.html" class="nav-link">Properties</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="/" class="nav-logo">
+            <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
+          </a>
+          <nav class="nav-right">
+            <ul>
+              <li>
+                <a href="contact-us.html" class="nav-link">Contact us</a>
+              </li>
+              <li>
+                <a class="btn-login" id="loginBtn" href="#">Login</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="mobile-overlay">
+            <button class="close-menu">×</button>
+            <div class="mobile-menu-content">
               <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li>
                   <a href="properties.html" class="nav-link">Properties</a>
                 </li>
-              </ul>
-            </nav>
-            <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
-            </a>
-            <nav class="nav-right">
-              <ul>
                 <li>
-                  <a href="contact-us.html" class="nav-link">Contact us</a>
+                  <a href="contact-us.html">Contact us</a>
                 </li>
                 <li>
-                  <a class="btn-login" id="loginBtn" href="#">Login</a>
+                  <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
                 </li>
               </ul>
-            </nav>
-
-            <div class="mobile-overlay">
-              <button class="close-menu">×</button>
-              <div class="mobile-menu-content">
-                <ul>
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="about.html" class="nav-link">About Us</a></li>
-                  <li>
-                    <a href="properties.html" class="nav-link">Properties</a>
-                  </li>
-                  <li>
-                    <a href="contact-us.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -91,16 +83,12 @@
 
     <section class="banner-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="banner-content">
-              <h1>
-                Perfect Platform For Buying Or <br />
-                Renting <span>Houses, Flats, And Villas</span>
-              </h1>
-              <p>Search thousands of homes. Find the one that fits you.</p>
-            </div>
-          </div>
+        <div class="banner-content">
+          <h1>
+            Perfect Platform For Buying Or <br />
+            Renting <span>Houses, Flats, And Villas</span>
+          </h1>
+          <p>Search thousands of homes. Find the one that fits you.</p>
         </div>
       </div>
     </section>
@@ -109,107 +97,107 @@
 
     <section class="apartment-section">
       <div class="container">
-        <div class="row">
-          <div class="floating-search">
-            <div class="form-area">
-              <form action="">
-                <div class="form-row">
-                  <div class="form-group">
-                    <div class="property-logo">
-                      <img src="./assets/icons/dollar-sign 1.png" alt="" />
-                    </div>
-                    <label for="property-for"></label>
-                    <select name="property-for" id="property-for">
-                      <option value="rent" selected>Rent</option>
-                      <option value="buy">Buy</option>
-                    </select>
+        <div class="floating-search">
+          <div class="form-area">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="property-logo">
+                    <img src="./assets/icons/dollar-sign 1.png" alt="" />
                   </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      name="location-search"
-                      id="location-search"
-                      placeholder="Your desiered location goes here"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <div class="house-logo">
-                      <img src="./assets/icons/Frame.png" alt="" />
-                    </div>
-                    <label for="property-type"></label>
-                    <select name="property-type" id="property-type">
-                      <option value="house" selected>House</option>
-                      <option value="apartment">Apartment</option>
-                      <option value="villa">Villa</option>
-                      <option value="residential">Residential</option>
-                      <option value="commercial">Commercial</option>
-                    </select>
-                  </div>
+                  <label for="property-for"></label>
+                  <select name="property-for" id="property-for">
+                    <option value="rent" selected>Rent</option>
+                    <option value="buy">Buy</option>
+                  </select>
                 </div>
-                <div class="form-row">
-                  <div class="form-group">
-                    <div class="price-range">
-                      <span>Price Range</span>
-                      <div class="currency-selector">
-                        <div class="price-logo">
-                          <img src="./assets/icons/$.png" alt="" />
-                        </div>
-                        <label for="currency-selector"></label>
-                        <select name="currency-selector" id="currency-selector">
-                          <option value="usd">USD</option>
-                          <option value="eur">EUR</option>
-                          <option value="inr">INR</option>
-                          <option value="cad">CAD</option>
-                        </select>
-                      </div>
-                    </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="location-search"
+                    id="location-search"
+                    placeholder="Your desiered location goes here"
+                  />
+                </div>
+                <div class="form-group">
+                  <div class="house-logo">
+                    <img src="./assets/icons/Frame.png" alt="" />
                   </div>
-                  <div class="slider-container">
-                    <div class="range-slider" id="range-slider">
-                      <div class="track" id="track"></div>
-                      <input
-                        type="range"
-                        id="min-range"
-                        min="0"
-                        max="20000"
-                        step="1000"
-                        value="5000"
-                      />
-                      <input
-                        type="range"
-                        id="max-range"
-                        min="0"
-                        max="20000"
-                        step="1000"
-                        value="15000"
-                      />
-                      <div class="price-label" id="min-label">$ 5,000</div>
-                      <div class="price-label" id="max-label">$ 15,000</div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="room-type">
-                      <div class="room-logo">
-                        <img
-                          src="./assets/icons/ic_round-meeting-room.png"
-                          alt=""
-                        />
+                  <label for="property-type"></label>
+                  <select name="property-type" id="property-type">
+                    <option value="house" selected>House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="villa">Villa</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="price-range">
+                    <span>Price Range</span>
+                    <div class="currency-selector">
+                      <div class="price-logo">
+                        <img src="./assets/icons/$.png" alt="" />
                       </div>
-                      <select name="room-numbers" id="room-numbers">
-                        <option value="1">1 Rooms</option>
-                        <option value="2" selected="">2 Rooms</option>
-                        <option value="3">3 Rooms</option>
-                        <option value="4">4 Rooms</option>
+                      <label for="currency-selector"></label>
+                      <select name="currency-selector" id="currency-selector">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="inr">INR</option>
+                        <option value="cad">CAD</option>
                       </select>
                     </div>
                   </div>
                 </div>
-              </form>
-              <a href="properties.html" class="btn-search">Search</a>
-            </div>
+                <div class="slider-container">
+                  <div class="range-slider" id="range-slider">
+                    <div class="track" id="track"></div>
+                    <input
+                      type="range"
+                      id="min-range"
+                      min="0"
+                      max="20000"
+                      step="1000"
+                      value="5000"
+                    />
+                    <input
+                      type="range"
+                      id="max-range"
+                      min="0"
+                      max="20000"
+                      step="1000"
+                      value="15000"
+                    />
+                    <div class="price-label" id="min-label">$ 5,000</div>
+                    <div class="price-label" id="max-label">$ 15,000</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="room-type">
+                    <div class="room-logo">
+                      <img
+                        src="./assets/icons/ic_round-meeting-room.png"
+                        alt=""
+                      />
+                    </div>
+                    <select name="room-numbers" id="room-numbers">
+                      <option value="1">1 Rooms</option>
+                      <option value="2" selected="">2 Rooms</option>
+                      <option value="3">3 Rooms</option>
+                      <option value="4">4 Rooms</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <a href="properties.html" class="btn-search">Search</a>
           </div>
-          <div class="apartment-content">
-            <h3>Explore Apartment Types</h3>
+        </div>
+        <div class="apartment-content">
+          <h3>Explore Apartment Types</h3>
+          <div class="col-10">
             <div class="apartment-type-cards">
               <div class="col-2">
                 <div class="commercial">
@@ -266,77 +254,75 @@
 
     <section class="about-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="col-6">
-              <div class="image-container">
-                <div class="bottom-img">
-                  <img src="./assets/image.png" alt="" />
-                </div>
-                <div class="top-img">
-                  <img src="./assets/Group 8.png" alt="" />
-                </div>
+        <div class="about-section-content">
+          <div class="col-6">
+            <div class="image-container">
+              <div class="bottom-img">
+                <img src="./assets/image.png" alt="" />
+              </div>
+              <div class="top-img">
+                <img src="./assets/Group 8.png" alt="" />
               </div>
             </div>
-            <div class="col-6">
-              <div class="about-section-content">
-                <div class="about-section-header">
-                  <div class="divider1"></div>
-                  <a href="#">About Us</a>
+          </div>
+          <div class="col-6">
+            <div class="about-text-content">
+              <div class="about-text-header">
+                <div class="divider1"></div>
+                <a href="#">About Us</a>
+              </div>
+              <h3>Welcome To VeroSpace, Your Trusted Real Estate Expert.</h3>
+              <p>
+                We believe real estate is more than transactions—it’s about
+                people, relationships, and the moments that turn a house into a
+                home. That’s why we’re here to support you like a trusted
+                friend, every step of the way.
+              </p>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <span class="stat-icon-bg">
+                    <img src="./assets/icons/fa-solid_smile.png" alt="" />
+                  </span>
+                  <span class="stat-details">
+                    <span
+                      class="stat-number"
+                      data-target="15000"
+                      id="trustedCustomers"
+                      >0K+</span
+                    >
+                    <span class="stat-label">Trusted Customer</span>
+                  </span>
                 </div>
-                <h3>Welcome To VeroSpace, Your Trusted Real Estate Expert.</h3>
-                <p>
-                  We believe real estate is more than transactions—it’s about
-                  people, relationships, and the moments that turn a house into
-                  a home. That’s why we’re here to support you like a trusted
-                  friend, every step of the way.
-                </p>
-                <div class="stats-row">
-                  <div class="stat-card">
-                    <span class="stat-icon-bg">
-                      <img src="./assets/icons/fa-solid_smile.png" alt="" />
-                    </span>
-                    <span class="stat-details">
-                      <span
-                        class="stat-number"
-                        data-target="15000"
-                        id="trustedCustomers"
-                        >0K+</span
-                      >
-                      <span class="stat-label">Trusted Customer</span>
-                    </span>
-                  </div>
-                  <div class="stat-card">
-                    <span class="stat-icon-bg">
-                      <img src="./assets/icons/gridicons_house.png" alt="" />
-                    </span>
-                    <span class="stat-details">
-                      <span
-                        class="stat-number"
-                        data-target="20000"
-                        id="housesSold"
-                        >0K+</span
-                      >
-                      <span class="stat-label">Houses Sold</span>
-                    </span>
-                  </div>
-                  <div class="stat-card">
-                    <span class="stat-icon-bg">
-                      <img
-                        src="./assets/icons/fluent_agents-28-filled.png"
-                        alt=""
-                      />
-                    </span>
-                    <span class="stat-details">
-                      <span
-                        class="stat-number"
-                        data-target="75000"
-                        id="propertyListed"
-                        >0K+</span
-                      >
-                      <span class="stat-label">Property Listed</span>
-                    </span>
-                  </div>
+                <div class="stat-card">
+                  <span class="stat-icon-bg">
+                    <img src="./assets/icons/gridicons_house.png" alt="" />
+                  </span>
+                  <span class="stat-details">
+                    <span
+                      class="stat-number"
+                      data-target="20000"
+                      id="housesSold"
+                      >0K+</span
+                    >
+                    <span class="stat-label">Houses Sold</span>
+                  </span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-icon-bg">
+                    <img
+                      src="./assets/icons/fluent_agents-28-filled.png"
+                      alt=""
+                    />
+                  </span>
+                  <span class="stat-details">
+                    <span
+                      class="stat-number"
+                      data-target="75000"
+                      id="propertyListed"
+                      >0K+</span
+                    >
+                    <span class="stat-label">Property Listed</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -349,415 +335,411 @@
 
     <section class="properties-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="properties-section-content">
-              <div class="properties-section-content-header">
-                <div class="properties-content-header">
-                  <div class="properties-section-header">
-                    <div class="divider1"></div>
-                    <a href="#">Recently Added</a>
-                  </div>
-                  <h3>Explore Our Newly Listed Properties</h3>
-                </div>
-                <a href="#" class="listings">All Listings</a>
+        <div class="properties-section-content">
+          <div class="properties-section-content-header">
+            <div class="properties-content-header">
+              <div class="properties-section-header">
+                <div class="divider1"></div>
+                <a href="#">Recently Added</a>
               </div>
-              <div class="properties-section-cards swiper properties-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 29.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Sobha Heartland Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+              <h3>Explore Our Newly Listed Properties</h3>
+            </div>
+            <a href="#" class="listings">All Listings</a>
+          </div>
+          <div class="properties-section-cards swiper properties-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 29.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Sobha Heartland Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Berlin, Germany</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 30.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Hillside Haven</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Genoa, Italy</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>Berlin, Germany</span>
                       </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 31.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Island Paradise Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 30.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Hillside Haven</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Paris, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 32.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Emerald Coast Manor</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Lyon, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>Genoa, Italy</span>
                       </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 29.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Sobha Heartland Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 31.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Island Paradise Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Berlin, Germany</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 30.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Hillside Haven</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Genoa, Italy</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>Paris, France</span>
                       </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 31.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Island Paradise Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 32.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Emerald Coast Manor</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Paris, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 32.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Emerald Coast Manor</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Lyon, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>Lyon, France</span>
                       </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 29.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Sobha Heartland Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 29.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Sobha Heartland Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Berlin, Germany</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 30.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Hillside Haven</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Genoa, Italy</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>Berlin, Germany</span>
                       </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 31.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Island Paradise Villa</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 30.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Hillside Haven</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Paris, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
                     </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Genoa, Italy</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="properties-section-card">
-                      <div class="property-section-card-img">
-                        <img src="./assets/Rectangle 32.png" alt="" />
-                      </div>
-                      <div class="txt-overlay">
-                        <div class="txt-overlay-row1">
-                          <h3>Emerald Coast Manor</h3>
-                          <div class="rating">
-                            <div class="rating-icon">
-                              <img
-                                src="./assets/icons/material-symbols_star-rounded.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>4.8</span>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 31.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Island Paradise Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
                         </div>
-                        <div class="txt-overlay-row2">
-                          <div class="location">
-                            <div class="location-icon">
-                              <img
-                                src="./assets/icons/fluent_location-16-filled.png"
-                                alt=""
-                              />
-                            </div>
-                            <span>Lyon, France</span>
-                          </div>
-                          <a href="#" class="detail-btn">Detail</a>
-                        </div>
+                        <span>4.8</span>
                       </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Paris, France</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 32.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Emerald Coast Manor</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Lyon, France</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 29.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Sobha Heartland Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Berlin, Germany</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 30.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Hillside Haven</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Genoa, Italy</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 31.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Island Paradise Villa</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Paris, France</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="properties-section-card">
+                  <div class="property-section-card-img">
+                    <img src="./assets/Rectangle 32.png" alt="" />
+                  </div>
+                  <div class="txt-overlay">
+                    <div class="txt-overlay-row1">
+                      <h3>Emerald Coast Manor</h3>
+                      <div class="rating">
+                        <div class="rating-icon">
+                          <img
+                            src="./assets/icons/material-symbols_star-rounded.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>4.8</span>
+                      </div>
+                    </div>
+                    <div class="txt-overlay-row2">
+                      <div class="location">
+                        <div class="location-icon">
+                          <img
+                            src="./assets/icons/fluent_location-16-filled.png"
+                            alt=""
+                          />
+                        </div>
+                        <span>Lyon, France</span>
+                      </div>
+                      <a href="#" class="detail-btn">Detail</a>
                     </div>
                   </div>
                 </div>
@@ -772,42 +754,36 @@
 
     <section class="services-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="services-content">
-              <div class="col-6">
-                <div class="image-container1">
-                  <div class="top-img1">
-                    <img src="./assets/Rectangle 38.png" alt="" />
-                  </div>
-                  <div class="bottom-img1">
-                    <img src="./assets/Rectangle 39.png" alt="" />
-                  </div>
-                </div>
+        <div class="services-content">
+          <div class="col-6">
+            <div class="image-container1">
+              <div class="top-img1">
+                <img src="./assets/Rectangle 38.png" alt="" />
               </div>
-              <div class="col-6">
-                <div class="services-section-content">
-                  <div class="services-section-header">
-                    <div class="divider1"></div>
-                    <a href="#">Other Services</a>
-                  </div>
-                  <h3>
-                    We Make Sell Or Rent Your Property Simple and Profitable.
-                  </h3>
-                  <p>
-                    We believe real estate is more than transactions—it’s about
-                    people, relationships, and the moments that turn a house
-                    into a home. That’s why we’re here to support you like a
-                    trusted friend, every step of the way.
-                  </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Et aliquet sed nibh
-                    porttitor lacus. Sodales maecenas aliquam dis neque posuere
-                    urna. Sodales
-                  </p>
-                  <a href="#" class="property-btn">Submit Property</a>
-                </div>
+              <div class="bottom-img1">
+                <img src="./assets/Rectangle 39.png" alt="" />
               </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="services-section-content">
+              <div class="services-section-header">
+                <div class="divider1"></div>
+                <a href="#">Other Services</a>
+              </div>
+              <h3>We Make Sell Or Rent Your Property Simple and Profitable.</h3>
+              <p>
+                We believe real estate is more than transactions—it’s about
+                people, relationships, and the moments that turn a house into a
+                home. That’s why we’re here to support you like a trusted
+                friend, every step of the way.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Et aliquet sed nibh
+                porttitor lacus. Sodales maecenas aliquam dis neque posuere
+                urna. Sodales
+              </p>
+              <a href="#" class="property-btn">Submit Property</a>
             </div>
           </div>
         </div>
@@ -818,271 +794,262 @@
 
     <section class="testimonials-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="testimonials-section-content">
-              <div class="testimonials-section-header">
-                <div class="divider1"></div>
-                <a href="#">Testimonials</a>
+        <div class="testimonials-section-content">
+          <div class="testimonials-section-header">
+            <div class="divider1"></div>
+            <a href="#">Testimonials</a>
+          </div>
+          <h3>What Our Customer Says</h3>
+        </div>
+        <div class="testimonials-image-container">
+          <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="testimonials1">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 42.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6.png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>William Jones</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3>What Our Customer Says</h3>
-            </div>
-            <div class="testimonials-image-container">
-              <div class="swiper testimonials-swiper">
-                <div class="swiper-wrapper">
-                  <!-- Slide 1 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials1">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 42.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>William Jones</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testimonials2">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 44.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6 (1).png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>Jake Paul</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials2">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 44.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>Jake Paul</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials1">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 42.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6.png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>William Jones</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Add more slides as needed -->
-                  <!-- Slide 1 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials1">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 42.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>William Jones</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials2">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 44.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6 (1).png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>Jake Paul</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials2">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 44.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>Jake Paul</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                </div>
+              </div>
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="testimonials1">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 42.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6.png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>William Jones</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Slide 1 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials1">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 42.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>William Jones</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="testimonials2">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 44.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6 (1).png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>Jake Paul</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials2">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 44.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>Jake Paul</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials1">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 42.png" alt="" />
+                  </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6.png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>William Jones</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Slide 1 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials1">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 42.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>William Jones</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials2">
+                  <div class="testimonials-image">
+                    <img src="./assets/Rectangle 44.png" alt="" />
                   </div>
-                  <!-- Slide 2 -->
-                  <div class="swiper-slide">
-                    <div class="testimonials2">
-                      <div class="testimonials-image">
-                        <img src="./assets/Rectangle 44.png" alt="" />
-                      </div>
-                      <div class="testimonial-card">
-                        <p>
-                          Lorem ipsum dolor sit amet consec. Mauris a vitae
-                          commodo neque viverra elementum quam turpis morbi.
-                          Suspendisse orci tristique leo sit eu nunc.
-                        </p>
-                        <span></span>
-                        <div class="author">
-                          <img
-                            src="./assets/customer-images/Ellipse 6.png"
-                            class="author-img"
-                          />
-                          <div>
-                            <h4>Jake Paul</h4>
-                            <div class="star-rating">
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star full"></span>
-                              <span class="star empty"></span>
-                            </div>
-                          </div>
+                  <div class="testimonial-card">
+                    <p>
+                      Lorem ipsum dolor sit amet consec. Mauris a vitae commodo
+                      neque viverra elementum quam turpis morbi. Suspendisse
+                      orci tristique leo sit eu nunc.
+                    </p>
+                    <span></span>
+                    <div class="author">
+                      <img
+                        src="./assets/customer-images/Ellipse 6 (1).png"
+                        class="author-img"
+                      />
+                      <div>
+                        <h4>Jake Paul</h4>
+                        <div class="star-rating">
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star full"></span>
+                          <span class="star empty"></span>
                         </div>
                       </div>
                     </div>
@@ -1099,44 +1066,40 @@
 
     <section class="companies-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="companies-section-content">
-              <h5>Trusted by 200+ Companies</h5>
-              <div class="scrl-wrpr">
-                <div class="img-item" style="--i: 1">
-                  <img src="./assets/company-logos/image 187.png" alt="" />
-                </div>
-                <div class="img-item" style="--i: 2">
-                  <img src="./assets/company-logos/image 189.png" alt="" />
-                </div>
-                <div class="img-item" style="--i: 3">
-                  <img src="./assets/company-logos/image 190.png" alt="" />
-                </div>
-                <div class="img-item" style="--i: 4">
-                  <img src="./assets/company-logos/image 191.png" alt="" />
-                </div>
-                <div class="img-item" style="--i: 5">
-                  <img src="./assets/company-logos/image 192.png" alt="" />
-                </div>
-              </div>
-              <div class="newsletter-area">
-                <div class="newsletter-area-header">
-                  <h5>Newsletter To Get Updated The Latest News</h5>
-                </div>
-                <form class="newsletter-form">
-                  <div class="input-text">
-                    <input
-                      type="email"
-                      class="newsletter-input"
-                      placeholder="Enter Your Email"
-                      required
-                    />
-                  </div>
-                  <a href="#" class="subscribe-btn">Subscribe</a>
-                </form>
-              </div>
+        <div class="companies-section-content">
+          <h5>Trusted by 200+ Companies</h5>
+          <div class="scrl-wrpr">
+            <div class="img-item" style="--i: 1">
+              <img src="./assets/company-logos/image 187.png" alt="" />
             </div>
+            <div class="img-item" style="--i: 2">
+              <img src="./assets/company-logos/image 189.png" alt="" />
+            </div>
+            <div class="img-item" style="--i: 3">
+              <img src="./assets/company-logos/image 190.png" alt="" />
+            </div>
+            <div class="img-item" style="--i: 4">
+              <img src="./assets/company-logos/image 191.png" alt="" />
+            </div>
+            <div class="img-item" style="--i: 5">
+              <img src="./assets/company-logos/image 192.png" alt="" />
+            </div>
+          </div>
+          <div class="newsletter-area">
+            <div class="newsletter-area-header">
+              <h5>Newsletter To Get Updated The Latest News</h5>
+            </div>
+            <form class="newsletter-form">
+              <div class="input-text">
+                <input
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Enter Your Email"
+                  required
+                />
+              </div>
+              <a href="#" class="subscribe-btn">Subscribe</a>
+            </form>
           </div>
         </div>
       </div>
@@ -1144,99 +1107,91 @@
 
     <footer class="footer-section">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="footer-content">
-              <div class="col-5">
-                <div class="footer-left">
-                  <a href="index.html" class="footer-logo">
-                    <img src="./assets/logos/Group 24 (1).png" alt="" />
+        <div class="footer-content">
+          <div class="footer-top">
+            <div class="col-5">
+              <div class="footer-left">
+                <a href="index.html" class="footer-logo">
+                  <img src="./assets/logos/Group 24 (1).png" alt="" />
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur. Pharetra ornare
+                  aliquet nunc dui in scelerporttitor. Proin ullamcorper.
+                </p>
+                <div class="social-icons">
+                  <a href="#" class="social-icon1">
+                    <img src="./assets/icons/line-md_facebook.png" alt="" />
                   </a>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Pharetra ornare
-                    aliquet nunc dui in scelerporttitor. Proin ullamcorper.
-                  </p>
-                  <div class="social-icons">
-                    <a href="#" class="social-icon1">
-                      <img src="./assets/icons/line-md_facebook.png" alt="" />
-                    </a>
-                    <a href="#" class="social-icon2">
-                      <img
-                        src="./assets/icons/mingcute_twitter-fill.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#" class="social-icon3">
-                      <img
-                        src="./assets/icons/lets-icons_insta-fill.png"
-                        alt=""
-                      />
-                    </a>
-                    <a href="#" class="social-icon4">
-                      <img
-                        src="./assets/icons/mingcute_youtube-fill.png"
-                        alt=""
-                      />
-                    </a>
-                  </div>
+                  <a href="#" class="social-icon2">
+                    <img
+                      src="./assets/icons/mingcute_twitter-fill.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="#" class="social-icon3">
+                    <img
+                      src="./assets/icons/lets-icons_insta-fill.png"
+                      alt=""
+                    />
+                  </a>
+                  <a href="#" class="social-icon4">
+                    <img
+                      src="./assets/icons/mingcute_youtube-fill.png"
+                      alt=""
+                    />
+                  </a>
                 </div>
               </div>
-              <div class="divider2"></div>
-              <div class="col-2">
-                <div class="footer-center">
-                  <h4>Useful Links</h4>
-                  <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                  </ul>
-                </div>
+            </div>
+            <div class="divider2"></div>
+            <div class="col-2">
+              <div class="footer-center">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Properties</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
               </div>
-              <div class="col-4">
-                <div class="footer-right">
-                  <h4>Our Properties</h4>
-                  <div class="property-images-container">
-                    <div class="property-image-row">
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 44.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 42.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 30.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/image.png" alt="" />
-                      </div>
+            </div>
+            <div class="col-4">
+              <div class="footer-right">
+                <h4>Our Properties</h4>
+                <div class="property-images-container">
+                  <div class="property-image-row">
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 44.png" alt="" />
                     </div>
-                    <div class="property-image-row">
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 31.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 32.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 54.png" alt="" />
-                      </div>
-                      <div class="property-images">
-                        <img src="./assets/Rectangle 55.png" alt="" />
-                      </div>
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 42.png" alt="" />
+                    </div>
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 30.png" alt="" />
+                    </div>
+                    <div class="property-images">
+                      <img src="./assets/image.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="property-image-row">
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 31.png" alt="" />
+                    </div>
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 32.png" alt="" />
+                    </div>
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 54.png" alt="" />
+                    </div>
+                    <div class="property-images">
+                      <img src="./assets/Rectangle 55.png" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
-    <footer class="subfooter-seection">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
+          <div class="footer-bottom">
             <div class="subfooter-content">
               <div class="subfooter-content-left">
                 <p>Copyright &copy;2024 VeroSpace, All rights reserved</p>
@@ -1322,8 +1277,5 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Splide JS -->
-    <!-- Splide JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
 </html>
