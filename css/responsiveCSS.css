@@ -794,4 +794,9 @@
   .faq-answer-content > p {
     font-size: 12px !important;
   }
+
+  .bottom-img1 > img{
+    border-radius: 15px;
+  }
+
 }
