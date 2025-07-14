@@ -109,6 +109,14 @@
     right: 0;
   }
 
+  .properties-section{
+    padding: 0 15px;
+  }
+
+  .properties-swiper{
+    padding: 0;
+  }
+
   .properties-details-section {
     margin-top: 210px;
   }
