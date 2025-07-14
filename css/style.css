@@ -855,7 +855,7 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--color-dark-grey-4);
 }
 
-.apartment-content .row {
+.apartment-row {
   display: flex;
   flex-wrap: wrap;
   max-width: 1046.59px;
@@ -934,7 +934,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 20px;
+  padding-block: 50px;
 }
 
 .about-section > div > div {
