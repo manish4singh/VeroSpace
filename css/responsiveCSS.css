@@ -13,7 +13,6 @@
   .col-12 {
     width: 100% !important;
   }
-
   .banner-content {
     margin-top: 100px;
   }
@@ -23,7 +22,7 @@
   }
 
   .floating-search {
-    top: -125px;
+    top: 495px;
   }
 
   .form-row:last-child > .form-group:first-child,
@@ -39,6 +38,10 @@
 
   .apartment-content {
     margin-top: 300px;
+  }
+
+  .about-section {
+    padding-block: 140px 30px;
   }
 
   .floating-search1 {
@@ -178,7 +181,10 @@
     font-size: 16px;
   }
 
-  /* Hide sidebar and show button on small screens */
+  .navbar {
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
 
   .footer-content,
   .newsletter-area,
@@ -303,8 +309,7 @@
     display: none !important;
   }
   .header-section > div > div {
-    flex-direction: row-reverse;
-    padding: 10px;
+    padding: 15px;
   }
   .banner-content {
     margin-top: 30px;
@@ -336,7 +341,7 @@
 
   .testimonial-card > p {
     font-size: 13px;
-    line-height: 13 0%;
+    line-height: 130%;
   }
 
   .author h4 {
@@ -451,9 +456,10 @@
     top: 10px;
   }
 
-  .header-section {
-    top: 10px;
+  .navbar{
+    padding: 10px;
   }
+
   .properties-section-content-header {
     flex-direction: column;
     width: 100%;
@@ -511,11 +517,11 @@
   }
 
   .testimonial-card > p {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .author h4 {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .author > div {
@@ -795,8 +801,7 @@
     font-size: 12px !important;
   }
 
-  .bottom-img1 > img{
+  .bottom-img1 > img {
     border-radius: 15px;
   }
-
 }

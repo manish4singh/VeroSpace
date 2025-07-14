@@ -43,7 +43,9 @@
   --color-black-10: #0000001a; /* Black at 10% opacity */
 }
 
-.banner-section {
+
+
+.banner-wrppr2 {
   background: url("../../assets/banner/Banner1.png") no-repeat center
     center/cover;
   min-height: 462px;
