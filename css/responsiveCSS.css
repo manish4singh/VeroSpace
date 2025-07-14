@@ -1,24 +1,17 @@
 @media screen and (max-width: 992px) {
-  .col-1,
-  .col-2,
-  .col-3,
-  .col-4,
-  .col-5,
-  .col-6,
-  .col-7,
-  .col-8,
-  .col-9,
-  .col-10,
-  .col-11,
-  .col-12 {
-    width: 100% !important;
+  .nav-logo {
+    width: 120px;
+  }
+
+  .banner-section {
+    padding: 17px 20px;
   }
   .banner-content {
     margin-top: 100px;
   }
 
   .banner-content > h1 {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .floating-search {
@@ -37,11 +30,11 @@
   }
 
   .apartment-content {
-    margin-top: 300px;
+    margin-top: 250px;
   }
 
   .about-section {
-    padding-block: 140px 30px;
+    padding-block: 180px 30px;
   }
 
   .floating-search1 {
@@ -116,9 +109,6 @@
     right: 0;
   }
 
-  .services-section-content {
-    margin-top: 60px;
-  }
   .properties-details-section {
     margin-top: 210px;
   }
@@ -172,6 +162,20 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 100% !important;
+  }
   .btn-login {
     background: var(--color-primary);
     color: white !important;
@@ -186,12 +190,33 @@
     padding: 20px;
   }
 
+  .nav-logo {
+    width: 100px;
+  }
+
   .footer-content,
   .newsletter-area,
-  .newsletter-form,
-  .apartment-type-cards {
+  .newsletter-form {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .col-20 {
+    width: 33.33% !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  .apartment-content > h3 {
+    font-size: 28px;
+  }
+
+  .commercial,
+  .residential,
+  .villa,
+  .apartment,
+  .warehouse {
+    margin-bottom: 30px;
   }
 
   .form-row:first-child > .form-group:first-child,
@@ -320,8 +345,14 @@
   }
 
   .about-section {
-    margin-top: 170px;
-    margin-bottom: 50px;
+    padding-block: 120px 30px;
+  }
+
+  .services-section-content {
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .services-content {
@@ -354,6 +385,7 @@
   .about-text-content {
     align-items: center;
     text-align: center;
+    margin-block: 30px;
   }
 
   .about-text-content > h3,
@@ -456,12 +488,16 @@
     top: 10px;
   }
 
-  .banner-section{
-    padding: 15px;
+  .banner-section {
+    padding: 10px;
   }
 
-  .navbar{
+  .navbar {
     padding: 10px;
+  }
+
+  .nav-logo {
+    width: 80px;
   }
 
   .properties-section-content-header {
@@ -501,6 +537,18 @@
 
   .apartment-content > h3 {
     font-size: 26px;
+  }
+
+  .col-20 {
+    width: 40% !important;
+  }
+
+  .commercial,
+  .residential,
+  .villa,
+  .apartment,
+  .warehouse {
+    margin-bottom: 40px;
   }
 
   .stats-row {
@@ -662,6 +710,14 @@
     margin-bottom: 30px;
   }
 
+  .txt-overlay {
+    padding: 10px;
+  }
+/* 
+  .txt-overlay-row1 > h3 {
+    font-size: 10px;
+  } */
+
   .txt-overlay-content > h3 {
     font-size: 16px;
   }
@@ -669,6 +725,16 @@
   .txt-overlay-content > p {
     font-size: 13px;
   }
+
+  /* .rating > span,
+  .location > span {
+    font-size: 10px;
+  } */
+/* 
+  .detail-btn {
+    font-size: 8px;
+    padding: 5px;
+  } */
 
   .call-icon {
     width: 26px;
@@ -809,3 +875,4 @@
     border-radius: 15px;
   }
 }
+

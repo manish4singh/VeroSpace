@@ -164,7 +164,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
 }
 
 .navbar {
@@ -175,6 +174,18 @@ a:hover {
   width: 100%;
   background: var(--color-white);
   border-radius: 50px;
+}
+
+.nav-logo {
+  display: inline-block;
+  width: 140px;
+  cursor: pointer;
+}
+
+.nav-logo > img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .menu,
@@ -193,7 +204,7 @@ a:hover {
 .nav-right > ul {
   display: flex;
   align-items: center;
-  gap: 41px;
+  gap: 30px;
 }
 .nav-left > ul > li > a,
 .nav-right > ul > li > a {
@@ -861,6 +872,7 @@ input[type="range"]::-webkit-slider-thumb {
   max-width: 1046.59px;
   width: 100%;
   margin-top: 30px;
+  justify-content: center;
 }
 
 .commercial,
@@ -952,14 +964,11 @@ input[type="range"]::-webkit-slider-thumb {
 .image-container {
   max-width: 90%;
   position: relative;
-  /* max-width: 535px; */
-  /* min-width: 200px; */
   margin: 0 auto;
 }
 
 .bottom-img {
-  max-width: 85%;
-  /* height: auto; */
+  max-width: 70%;
   margin: 0 auto;
 }
 
@@ -973,8 +982,8 @@ input[type="range"]::-webkit-slider-thumb {
 .top-img {
   position: absolute;
   top: -30%;
-  right: -5%;
-  max-width: 74%;
+  right: 0;
+  max-width: 50%;
 }
 
 .top-img > img {
@@ -1064,8 +1073,9 @@ input[type="range"]::-webkit-slider-thumb {
 .stat-details {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 3px;
+  text-align: center;
 }
 .stat-number {
   font-size: 28px;
@@ -1167,12 +1177,13 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 12px;
 }
 
-.properties-section-cards {
+.properties-swiper {
   width: 100%;
   margin-top: 48px;
+  padding: 0 15px;
 }
 
-.properties-section-cards > .swiper-wrapper > .swiper-slide {
+.properties-swiper > .swiper-wrapper > .swiper-slide {
   width: 100%; /* Let Swiper manage width */
 }
 
@@ -1287,7 +1298,8 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 15px;
+  padding: 0 15px;
+  flex-direction: row-reverse;
 }
 
 .services-content {
@@ -1334,6 +1346,9 @@ input[type="range"]::-webkit-slider-thumb {
 
 .services-section-content {
   max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .services-section-header {
@@ -1342,6 +1357,7 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   flex-direction: row;
   max-width: 240px;
+  width: 100%;
 }
 
 .services-section-header > a {
@@ -1388,6 +1404,10 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--color-white);
   border-radius: 60px;
   text-align: center;
+  max-width: 262px;
+  width: 100%;
+  text-wrap: nowrap;
+  transition: background 0.3s;
 }
 
 /* Testimonials Section */
