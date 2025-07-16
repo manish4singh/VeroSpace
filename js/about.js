@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       // Removed navigation and pagination options
       breakpoints: {
         0: {

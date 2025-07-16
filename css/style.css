@@ -9,8 +9,9 @@
   box-sizing: border-box;
 }
 
+html,
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body.no-scroll {
@@ -1042,7 +1043,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  max-width: 165px; 
+  max-width: 165px;
   width: 100%;
 }
 
@@ -1086,10 +1087,10 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 35px;
 }
 .stat-card {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
 }
 .stat-icon-bg {
   background: #fff;
