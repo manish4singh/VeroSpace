@@ -25,8 +25,11 @@
     />
     <!-- AOS CDN -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -193,7 +196,7 @@
 
     <!-- Properties Details Section-->
 
-    <section class="properties-details-section">
+    <section class="properties-details-section" data-aos="fade-up">
       <div class="container">
         <div class="properties-details-content">
           <div class="col-3">
@@ -1006,7 +1009,7 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer-section" data-aos="fade-up">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -1178,5 +1181,11 @@
     <script src="./js/properties.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      console.log("AOS in HTML:", typeof AOS);
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -30,6 +30,14 @@
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
     <link rel="stylesheet" href="./css/pages/about-us.css" />
     <link rel="stylesheet" href="./css/pages/contact-us.css" />
+    <!-- AOS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="mobile-overlay">
@@ -92,7 +100,7 @@
       </div>
     </section>
 
-    <section class="get-in-touch-section">
+    <section class="get-in-touch-section" data-aos="fade-up">
       <div class="container">
         <div class="get-in-touch-content">
           <div class="col-5">
@@ -212,7 +220,7 @@
         </div>
       </div>
     </section>
-    <section class="faq-section">
+    <section class="faq-section" data-aos="fade-right">
       <div class="container">
         <div class="col-6">
           <div class="faq-content">
@@ -377,7 +385,7 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer-section" data-aos="fade-up">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -553,5 +561,11 @@
     <!-- Splide JS -->
     <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- AOS JS LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      console.log("AOS in HTML:", typeof AOS);
+      AOS.init();
+    </script>
   </body>
 </html>

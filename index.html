@@ -13,6 +13,15 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- AOS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- Swiper CDN -->
     <link
       rel="stylesheet"
@@ -66,7 +75,7 @@
     </header>
     <!-- Banner Section -->
 
-    <section class="banner-section">
+    <section class="banner-section" data-aos="fade-up">
       <div class="banner-wrppr">
         <div class="container">
           <div class="banner-content">
@@ -180,7 +189,7 @@
 
     <!-- Apartment Section -->
 
-    <section class="apartment-section">
+    <section class="apartment-section" data-aos="fade-right">
       <div class="container">
         <div class="apartment-content">
           <h3>Explore Apartment Types</h3>
@@ -237,7 +246,7 @@
 
     <!-- About Section -->
 
-    <section class="about-section">
+    <section class="about-section" data-aos="fade-left">
       <div class="container">
         <div class="row">
           <div class="col-6">
@@ -318,7 +327,7 @@
 
     <!-- Properties Section -->
 
-    <section class="properties-section">
+    <section class="properties-section" data-aos="zoom-in">
       <div class="properties-wrppr">
         <div class="container">
           <div class="row">
@@ -739,7 +748,7 @@
 
     <!-- Services Section -->
 
-    <section class="services-section">
+    <section class="services-section" data-aos="fade-up">
       <div class="container">
         <div class="row">
           <div class="col-6">
@@ -779,7 +788,7 @@
 
     <!-- Testimonials Section -->
 
-    <section class="testimonials-section">
+    <section class="testimonials-section" data-aos="fade-right">
       <div class="testimonials-wrppr">
         <div class="container">
           <div class="testimonials-section-content">
@@ -1053,7 +1062,7 @@
 
     <!-- Companies Section -->
 
-    <section class="companies-section">
+    <section class="companies-section" data-aos="fade-up">
       <div class="container">
         <div class="companies-section-content">
           <h5>Trusted by 200+ Companies</h5>
@@ -1094,7 +1103,7 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer-section" data-aos="fade-up">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -1261,8 +1270,16 @@
       </div>
     </div>
 
+    <!-- Local JS files-->
+
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
+    <!-- AOS JS LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      console.log("AOS in HTML:", typeof AOS);
+      AOS.init();
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
