@@ -31,58 +31,42 @@
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
   </head>
   <body>
+    <div class="mobile-overlay">
+      <button class="close-menu">×</button>
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <header class="header-section">
       <div class="container">
         <div class="row">
-          <div class="navbar">
-            <!-- Hamburger Menu button -->
+          <nav class="navbar">
+            <a href="index.html" class="navbar-brand">
+              <img src="./assets/logos/Group 24.png" alt="" />
+            </a>
             <div class="menu" id="menu">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <nav class="nav-left">
-              <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li>
-                  <a href="properties.html" class="nav-link">Properties</a>
-                </li>
-              </ul>
-            </nav>
-            <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
-            </a>
-            <nav class="nav-right">
-              <ul>
-                <li>
-                  <a href="contact-us.html" class="nav-link">Contact us</a>
-                </li>
-                <li>
-                  <a class="btn-login" id="loginBtn" href="#">Login</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="mobile-overlay">
-              <button class="close-menu">×</button>
-              <div class="mobile-menu-content">
-                <ul>
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="about.html" class="nav-link">About Us</a></li>
-                  <li>
-                    <a href="properties.html" class="nav-link">Properties</a>
-                  </li>
-                  <li>
-                    <a href="contact-us.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
-                  </li>
-                </ul>
-              </div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="about.html">About Us</a></li>
+              <li><a class="nav-link" href="properties.html">Properties</a></li>
+            </ul>
+            <div class="nav-btns">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="#" class="btn-login" id="loginBtn">Login</a>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
@@ -133,7 +117,7 @@
             <div class="about-text-content">
               <div class="about-text-header">
                 <div class="divider1"></div>
-                <a href="#">About Us</a>
+                <a href="#url">About Us</a>
               </div>
               <h3>The Real Estate Company You Can Trust To Keep It Real</h3>
               <p>
@@ -216,7 +200,7 @@
             <div class="commitment-text-content">
               <div class="commitment-section-header">
                 <div class="divider1"></div>
-                <a href="#">Our Commitment</a>
+                <a href="#url">Our Commitment</a>
               </div>
               <h3>Because a home can change everything</h3>
               <p>
@@ -246,93 +230,95 @@
     </section>
 
     <!-- Teams Section -->
-    <section class="teams-section">
-      <div class="teams-wrppr">
-        <div class="container">
-          <div class="teams-section-content">
-            <div class="teams-section-header">
-              <div class="divider1"></div>
-              <a href="#">Professional Experts</a>
+      <section class="teams-section">
+        <div class="teams-wrppr">
+          <div class="container">
+            <div class="teams-section-content">
+              <div class="teams-section-header">
+                <div class="divider1"></div>
+                <a href="#url">Professional Experts</a>
+              </div>
+              <h3>Meet Our Real Estate Team</h3>
             </div>
-            <h3>Meet Our Real Estate Team</h3>
-          </div>
-          <div class="teams-section-cards">
-            <div class="col-3">
-              <div class="teams-section-card">
-                <div class="teams-section-card-img">
-                  <img src="./assets/Rectangle 65.png" alt="" />
-                </div>
-                <div class="txt-overlay1">
-                  <div class="txt-overlay-row">
-                    <div class="txt-overlay-content">
-                      <h3>Michel Smith</h3>
-                      <p>Property Expert</p>
+            <div class="teams-section-cards swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="teams-section-card">
+                    <div class="teams-section-card-img">
+                      <img src="./assets/Rectangle 65.png" alt="" />
                     </div>
-                    <a href="tel:+1 8709932406" class="call-icon">
-                      <img src="./assets/icons/gg_phone.png" alt="" />
-                    </a>
+                    <div class="txt-overlay1">
+                      <div class="txt-overlay-row">
+                        <div class="txt-overlay-content">
+                          <h3>Michel Smith</h3>
+                          <p>Property Expert</p>
+                        </div>
+                        <a href="tel:+1 8709932406" class="call-icon">
+                          <img src="./assets/icons/gg_phone.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="teams-section-card">
-                <div class="teams-section-card-img">
-                  <img src="./assets/Rectangle 67.png" alt="" />
-                </div>
-                <div class="txt-overlay1">
-                  <div class="txt-overlay-row">
-                    <div class="txt-overlay-content">
-                      <h3>Lissa Mormont</h3>
-                      <p>Property Expert</p>
+                <div class="swiper-slide">
+                  <div class="teams-section-card">
+                    <div class="teams-section-card-img">
+                      <img src="./assets/Rectangle 67.png" alt="" />
                     </div>
-                    <a href="tel:+1 8709932406" class="call-icon">
-                      <img src="./assets/icons/gg_phone.png" alt="" />
-                    </a>
+                    <div class="txt-overlay1">
+                      <div class="txt-overlay-row">
+                        <div class="txt-overlay-content">
+                          <h3>Lissa Mormont</h3>
+                          <p>Property Expert</p>
+                        </div>
+                        <a href="tel:+1 8709932406" class="call-icon">
+                          <img src="./assets/icons/gg_phone.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="teams-section-card">
-                <div class="teams-section-card-img">
-                  <img src="./assets/Rectangle 69.png" alt="" />
-                </div>
-                <div class="txt-overlay1">
-                  <div class="txt-overlay-row">
-                    <div class="txt-overlay-content">
-                      <h3>Tony Hemsworth</h3>
-                      <p>Property Expert</p>
+                <div class="swiper-slide">
+                  <div class="teams-section-card">
+                    <div class="teams-section-card-img">
+                      <img src="./assets/Rectangle 69.png" alt="" />
                     </div>
-                    <a href="tel:+1 8709932406" class="call-icon">
-                      <img src="./assets/icons/gg_phone.png" alt="" />
-                    </a>
+                    <div class="txt-overlay1">
+                      <div class="txt-overlay-row">
+                        <div class="txt-overlay-content">
+                          <h3>Tony Hemsworth</h3>
+                          <p>Property Expert</p>
+                        </div>
+                        <a href="tel:+1 8709932406" class="call-icon">
+                          <img src="./assets/icons/gg_phone.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="teams-section-card">
-                <div class="teams-section-card-img">
-                  <img src="./assets/Rectangle 71.png" alt="" />
-                </div>
-                <div class="txt-overlay1">
-                  <div class="txt-overlay-row">
-                    <div class="txt-overlay-content">
-                      <h3>Jack Rozer</h3>
-                      <p>Property Expert</p>
+                <div class="swiper-slide">
+                  <div class="teams-section-card">
+                    <div class="teams-section-card-img">
+                      <img src="./assets/Rectangle 71.png" alt="" />
                     </div>
-                    <a href="tel:+1 8709932406" class="call-icon">
-                      <img src="./assets/icons/gg_phone.png" alt="" />
-                    </a>
+                    <div class="txt-overlay1">
+                      <div class="txt-overlay-row">
+                        <div class="txt-overlay-content">
+                          <h3>Jack Rozer</h3>
+                          <p>Property Expert</p>
+                        </div>
+                        <a href="tel:+1 8709932406" class="call-icon">
+                          <img src="./assets/icons/gg_phone.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <section class="companies-section">
       <div class="container">

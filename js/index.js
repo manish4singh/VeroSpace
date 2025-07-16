@@ -96,6 +96,7 @@ function animateCounter(element, target, duration = 1500) {
 
 // For Active links
 const navLinks = document.querySelectorAll(".nav-link");
+const contactUsLink = document.querySelector(".nav-btns a[href*='contact-us']");
 const currentPath = window.location.pathname.replace(/\/$/, "").toLowerCase();
 
 navLinks.forEach((link) => {
@@ -109,25 +110,59 @@ navLinks.forEach((link) => {
   }
 });
 
+// Handle Contact Us link in nav-btns section
+if (contactUsLink) {
+  const contactUsPath = contactUsLink.getAttribute("href").replace(/\/$/, "").toLowerCase();
+  if (currentPath.endsWith(contactUsPath)) {
+    contactUsLink.classList.add("active");
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".menu");
   const mobileOverlay = document.querySelector(".mobile-overlay");
   const closeBtn = document.querySelector(".close-menu");
   const menuLinks = document.querySelectorAll(".mobile-menu-content a");
 
-  if (!hamburger || !mobileOverlay) {
-    console.error("Hamburger or overlay not found!");
-    return;
+  function openMenu() {
+    hamburger.classList.add("open");
+    mobileOverlay.classList.add("active");
+    document.body.classList.add("no-scroll", "menu-open");
   }
 
-  function toggleMenu() {
-    hamburger.classList.toggle("open");
-    mobileOverlay.classList.toggle("active");
+  function closeMenu() {
+    hamburger.classList.remove("open");
+    mobileOverlay.classList.remove("active");
+    document.body.classList.remove("no-scroll", "menu-open");
   }
 
-  hamburger.addEventListener("click", toggleMenu);
-  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
-  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+  if (hamburger && mobileOverlay) {
+    hamburger.addEventListener("click", function () {
+      if (mobileOverlay.classList.contains("active")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
+  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+  mobileOverlay.addEventListener("click", (e) => {
+    if (e.target === mobileOverlay) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileOverlay.classList.contains("active")) {
+      closeMenu();
+    }
+  });
 });
 
 // Initialize everything when DOM is ready
@@ -212,8 +247,12 @@ document.addEventListener("DOMContentLoaded", () => {
         clickable: true,
       },
       breakpoints: {
-        576: {
+        0: {
           slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        576: {
+          slidesPerView: 2,
           spaceBetween: 15,
         },
         768: {

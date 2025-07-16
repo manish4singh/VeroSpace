@@ -34,59 +34,43 @@
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
   </head>
   <body>
+    <div class="mobile-overlay">
+      <button class="close-menu">×</button>
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Header Section -->
     <header class="header-section">
       <div class="container">
         <div class="row">
-          <div class="navbar">
-            <!-- Hamburger Menu button -->
+          <nav class="navbar">
+            <a href="index.html" class="navbar-brand">
+              <img src="./assets/logos/Group 24.png" alt="" />
+            </a>
             <div class="menu" id="menu">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <nav class="nav-left">
-              <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li>
-                  <a href="properties.html" class="nav-link">Properties</a>
-                </li>
-              </ul>
-            </nav>
-            <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
-            </a>
-            <nav class="nav-right">
-              <ul>
-                <li>
-                  <a href="contact-us.html" class="nav-link">Contact us</a>
-                </li>
-                <li>
-                  <a class="btn-login" id="loginBtn" href="#">Login</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="mobile-overlay">
-              <button class="close-menu">×</button>
-              <div class="mobile-menu-content">
-                <ul>
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="about.html" class="nav-link">About Us</a></li>
-                  <li>
-                    <a href="properties.html" class="nav-link">Properties</a>
-                  </li>
-                  <li>
-                    <a href="contact-us.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
-                  </li>
-                </ul>
-              </div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="about.html">About Us</a></li>
+              <li><a class="nav-link" href="properties.html">Properties</a></li>
+            </ul>
+            <div class="nav-btns">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="#" class="btn-login" id="loginBtn">Login</a>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
@@ -96,114 +80,114 @@
     <section class="banner-section">
       <div class="banner-wrppr2">
         <div class="container">
-        <div class="banner-content">
-          <h1>Properties</h1>
-          <p>
-            Home
-            <span class="arrow">
-              <img src="./assets/icons/mdi_arrow-right-thin.png" alt="" />
-            </span>
-            Properties
-          </p>
-        </div>
+          <div class="banner-content">
+            <h1>Properties</h1>
+            <p>
+              Home
+              <span class="arrow">
+                <img src="./assets/icons/mdi_arrow-right-thin.png" alt="" />
+              </span>
+              Properties
+            </p>
+          </div>
 
-        <div class="floating-search1">
-          <div class="form-area">
-            <form action="">
-              <div class="form-row">
-                <div class="form-group">
-                  <div class="property-logo">
-                    <img src="./assets/icons/dollar-sign 1.png" alt="" />
+          <div class="floating-search1">
+            <div class="form-area">
+              <form action="">
+                <div class="form-row">
+                  <div class="form-group">
+                    <div class="property-logo">
+                      <img src="./assets/icons/dollar-sign 1.png" alt="" />
+                    </div>
+                    <label for="property-for"></label>
+                    <select name="property-for" id="property-for">
+                      <option value="rent" selected>Rent</option>
+                      <option value="buy">Buy</option>
+                    </select>
                   </div>
-                  <label for="property-for"></label>
-                  <select name="property-for" id="property-for">
-                    <option value="rent" selected>Rent</option>
-                    <option value="buy">Buy</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    name="location-search"
-                    id="location-search"
-                    placeholder="Your desiered location goes here"
-                  />
-                </div>
-                <div class="form-group">
-                  <div class="house-logo">
-                    <img src="./assets/icons/Frame.png" alt="" />
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="location-search"
+                      id="location-search"
+                      placeholder="Your desiered location goes here"
+                    />
                   </div>
-                  <label for="property-type"></label>
-                  <select name="property-type" id="property-type">
-                    <option value="house" selected>House</option>
-                    <option value="apartment">Apartment</option>
-                    <option value="villa">Villa</option>
-                    <option value="residential">Residential</option>
-                    <option value="commercial">Commercial</option>
-                  </select>
+                  <div class="form-group">
+                    <div class="house-logo">
+                      <img src="./assets/icons/Frame.png" alt="" />
+                    </div>
+                    <label for="property-type"></label>
+                    <select name="property-type" id="property-type">
+                      <option value="house" selected>House</option>
+                      <option value="apartment">Apartment</option>
+                      <option value="villa">Villa</option>
+                      <option value="residential">Residential</option>
+                      <option value="commercial">Commercial</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <div class="price-range">
-                    <span>Price Range</span>
-                    <div class="currency-selector">
-                      <div class="price-logo">
-                        <img src="./assets/icons/$.png" alt="" />
+                <div class="form-row">
+                  <div class="form-group">
+                    <div class="price-range">
+                      <span>Price Range</span>
+                      <div class="currency-selector">
+                        <div class="price-logo">
+                          <img src="./assets/icons/$.png" alt="" />
+                        </div>
+                        <label for="currency-selector"></label>
+                        <select name="currency-selector" id="currency-selector">
+                          <option value="usd">USD</option>
+                          <option value="eur">EUR</option>
+                          <option value="inr">INR</option>
+                          <option value="cad">CAD</option>
+                        </select>
                       </div>
-                      <label for="currency-selector"></label>
-                      <select name="currency-selector" id="currency-selector">
-                        <option value="usd">USD</option>
-                        <option value="eur">EUR</option>
-                        <option value="inr">INR</option>
-                        <option value="cad">CAD</option>
-                      </select>
                     </div>
                   </div>
-                </div>
-                <div class="slider-container">
-                  <div class="range-slider" id="range-slider">
-                    <div class="track" id="track"></div>
-                    <input
-                      type="range"
-                      id="min-range"
-                      min="0"
-                      max="20000"
-                      step="1000"
-                      value="5000"
-                    />
-                    <input
-                      type="range"
-                      id="max-range"
-                      min="0"
-                      max="20000"
-                      step="1000"
-                      value="15000"
-                    />
-                    <div class="price-label" id="min-label">$ 5,000</div>
-                    <div class="price-label" id="max-label">$ 15,000</div>
+                  <div class="slider-container">
+                    <div class="range-slider" id="range-slider">
+                      <div class="track" id="track"></div>
+                      <input
+                        type="range"
+                        id="min-range"
+                        min="0"
+                        max="20000"
+                        step="1000"
+                        value="5000"
+                      />
+                      <input
+                        type="range"
+                        id="max-range"
+                        min="0"
+                        max="20000"
+                        step="1000"
+                        value="15000"
+                      />
+                      <div class="price-label" id="min-label">$ 5,000</div>
+                      <div class="price-label" id="max-label">$ 15,000</div>
+                    </div>
+                  </div>
+                  <div class="room-type">
+                    <div class="room-logo">
+                      <img
+                        src="./assets/icons/ic_round-meeting-room.png"
+                        alt=""
+                      />
+                    </div>
+                    <select name="room-numbers" id="room-numbers">
+                      <option value="1">1 Rooms</option>
+                      <option value="2" selected>2 Rooms</option>
+                      <option value="3">3 Rooms</option>
+                      <option value="4">4 Rooms</option>
+                    </select>
                   </div>
                 </div>
-                <div class="room-type">
-                  <div class="room-logo">
-                    <img
-                      src="./assets/icons/ic_round-meeting-room.png"
-                      alt=""
-                    />
-                  </div>
-                  <select name="room-numbers" id="room-numbers">
-                    <option value="1">1 Rooms</option>
-                    <option value="2" selected>2 Rooms</option>
-                    <option value="3">3 Rooms</option>
-                    <option value="4">4 Rooms</option>
-                  </select>
-                </div>
-              </div>
-            </form>
-            <a href="properties.html" class="btn-search">Search</a>
+              </form>
+              <a href="properties.html" class="btn-search">Search</a>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -542,9 +526,7 @@
                   </div>
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$1,299.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>
@@ -631,9 +613,7 @@
 
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$1,099.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>
@@ -720,9 +700,7 @@
                   </div>
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$25,000.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>
@@ -806,9 +784,7 @@
                   </div>
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$19,000.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>
@@ -895,9 +871,7 @@
                   </div>
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$30,000.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>
@@ -981,9 +955,7 @@
                   </div>
                   <div class="property-card-footer">
                     <h4 class="property-card-price">$1,099.00</h4>
-                    <a class="property-detail-btn" href="./property-detail.html"
-                      >DETAIL</a
-                    >
+                    <a class="property-detail-btn" href="#url">DETAIL</a>
                   </div>
                 </div>
               </div>

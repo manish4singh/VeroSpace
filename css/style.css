@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 /* Column CSS code */
 
 .col-1 {
@@ -174,15 +178,21 @@ a:hover {
   width: 100%;
   background: var(--color-white);
   border-radius: 50px;
+  position: relative;
 }
 
-.nav-logo {
+.navbar-brand {
   display: inline-block;
   width: 140px;
   cursor: pointer;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-.nav-logo > img {
+.navbar-brand > img {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -193,27 +203,56 @@ a:hover {
   display: none;
 }
 
-.nav-left,
-.nav-right {
+.mobile-overlay.active {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.nav-left > ul,
-.nav-right > ul {
+.nav-links {
+  margin-right: auto;
   display: flex;
+  flex-basis: 25%;
+  flex-direction: row;
+  gap: 20px;
+  /* justify-content: space-between; */
   align-items: center;
-  gap: 30px;
+  text-wrap: nowrap;
 }
-.nav-left > ul > li > a,
-.nav-right > ul > li > a {
+
+.nav-btns {
+  margin-left: auto;
+  display: flex;
+  flex-basis: 20%;
+  flex-direction: row;
+  gap: 20px;
+  /* justify-content: space-between; */
+  align-items: center;
+  text-wrap: nowrap;
+}
+
+.nav-links > li > a {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   color: var(--color-dark-grey-3);
   transition: color 0.3s ease-in-out;
+}
+
+.nav-btns > a {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-dark-grey-3);
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-btns > a:hover {
+  color: var(--color-accent);
+}
+
+.nav-btns > a.active {
+  color: var(--color-primary) !important;
 }
 
 .nav-link:hover {
@@ -248,7 +287,7 @@ a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 2000;
+  z-index: 20000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,7 +538,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: fit-content;
+  max-width: 90%;
   background: var(--color-white);
   border-radius: 15px;
   padding: 28px 24px 26.26px 24px;
@@ -508,7 +547,7 @@ a:hover {
   top: 580px;
   left: 0;
   right: 0;
-  z-index: 0;
+  z-index: 1;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
@@ -881,7 +920,6 @@ input[type="range"]::-webkit-slider-thumb {
 .apartment,
 .warehouse {
   min-width: 105px;
-  max-width: 174.59px;
   height: 170px;
   display: flex;
   justify-content: center;
@@ -1004,7 +1042,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  max-width: 186px;
+  max-width: 165px; 
   width: 100%;
 }
 
@@ -1048,10 +1086,10 @@ input[type="range"]::-webkit-slider-thumb {
   margin-top: 35px;
 }
 .stat-card {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
 }
 .stat-icon-bg {
   background: #fff;
@@ -1099,7 +1137,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .properties-wrppr {
   max-width: 1540px;
-  min-height: 619px;
+  min-height: fit-content;
   background: var(--color-off-white-1);
   display: flex;
   justify-content: center;
@@ -1112,7 +1150,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 15px;
+  margin: 15px 0;
 }
 
 .properties-section-content {
@@ -1140,6 +1178,10 @@ input[type="range"]::-webkit-slider-thumb {
   gap: 10px;
 }
 
+.properties-section-header:hover .divider1 {
+  width: 65px;
+}
+
 .properties-section-header > a {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -1149,19 +1191,6 @@ input[type="range"]::-webkit-slider-thumb {
 
 .properties-section-header:hover .divider1 {
   width: 65px;
-}
-
-.listings {
-  display: inline-block;
-  padding: 11px 22px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  background: var(--color-primary);
-  color: var(--color-white) !important;
-  border-radius: 50px;
-  text-transform: uppercase;
-  text-wrap: nowrap;
 }
 
 .properties-content-header {
@@ -1180,11 +1209,6 @@ input[type="range"]::-webkit-slider-thumb {
 .properties-swiper {
   width: 100%;
   margin-top: 48px;
-  padding: 0 15px;
-}
-
-.properties-swiper > .swiper-wrapper > .swiper-slide {
-  width: 100%; /* Let Swiper manage width */
 }
 
 .properties-section-card {
@@ -1208,7 +1232,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 .txt-overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   right: 0;
   background: var(--color-black-70);
@@ -1356,7 +1380,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  max-width: 240px;
+  max-width: 230px;
   width: 100%;
 }
 
@@ -1365,6 +1389,10 @@ input[type="range"]::-webkit-slider-thumb {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   color: var(--color-dark-grey-3);
+}
+
+.services-section-header:hover .divider1 {
+  width: 65px;
 }
 
 .services-section-content > h3 {
@@ -1393,7 +1421,8 @@ input[type="range"]::-webkit-slider-thumb {
   margin-bottom: 24px;
 }
 
-.property-btn {
+.property-btn,
+.listings {
   display: inline-block;
   padding: 11px 32px;
   font-family: "Montserrat", sans-serif;
@@ -1418,13 +1447,14 @@ input[type="range"]::-webkit-slider-thumb {
 
 .testimonials-wrppr {
   max-width: 1540px;
-  min-height: 616px;
+  min-height: fit-content;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background: var(--color-off-white-2);
   margin: 0 auto;
   border-radius: 40px;
+  padding: 15px 0;
 }
 
 .testimonials-section-content {
@@ -1451,6 +1481,10 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--color-dark-grey-3);
 }
 
+.testimonials-section-header:hover .divider1 {
+  width: 65px;
+}
+
 .testimonials-section-content > h3 {
   font-size: 32px;
   font-family: "Montserrat", sans-serif;
@@ -1465,38 +1499,23 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .testimonials-swiper {
-  padding: 20px 0 60px;
   width: 100%;
   overflow: hidden;
 }
 
-.testimonials-swiper .swiper-wrapper {
-  align-items: stretch;
-}
-
-.testimonials-swiper .swiper-slide {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Ensure slides don't shrink below their content */
-  flex-shrink: 0;
-}
-
 .testimonials1,
 .testimonials2 {
-  max-width: 100%;
+  max-width: 93%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin: 0 auto;
-  /* Ensure consistent height */
-  min-height: 370px;
+  min-height: 208px;
 }
 
 .testimonials-image {
-  height: 370px;
+  height: 100%;
   border-radius: 30px;
   background: var(--color-light-grey-4);
   width: 100%;
@@ -1831,7 +1850,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .footer-center > h4 {
   font-family: "Montserrat", sans-serif;
-  font-size: 24px;
+  font-size: 23px;
   font-weight: 600;
   color: var(--color-dark-grey-4);
 }

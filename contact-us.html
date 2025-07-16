@@ -32,59 +32,43 @@
     <link rel="stylesheet" href="./css/pages/contact-us.css" />
   </head>
   <body>
+    <div class="mobile-overlay">
+      <button class="close-menu">×</button>
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Header Section -->
     <header class="header-section">
       <div class="container">
         <div class="row">
-          <div class="navbar">
-            <!-- Hamburger Menu button -->
+          <nav class="navbar">
+            <a href="index.html" class="navbar-brand">
+              <img src="./assets/logos/Group 24.png" alt="" />
+            </a>
             <div class="menu" id="menu">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <nav class="nav-left">
-              <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li>
-                  <a href="properties.html" class="nav-link">Properties</a>
-                </li>
-              </ul>
-            </nav>
-            <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
-            </a>
-            <nav class="nav-right">
-              <ul>
-                <li>
-                  <a href="contact-us.html" class="nav-link">Contact us</a>
-                </li>
-                <li>
-                  <a class="btn-login" id="loginBtn" href="#">Login</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="mobile-overlay">
-              <button class="close-menu">×</button>
-              <div class="mobile-menu-content">
-                <ul>
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="about.html" class="nav-link">About Us</a></li>
-                  <li>
-                    <a href="properties.html" class="nav-link">Properties</a>
-                  </li>
-                  <li>
-                    <a href="contact-us.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
-                  </li>
-                </ul>
-              </div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="about.html">About Us</a></li>
+              <li><a class="nav-link" href="properties.html">Properties</a></li>
+            </ul>
+            <div class="nav-btns">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="#" class="btn-login" id="loginBtn">Login</a>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
@@ -94,17 +78,17 @@
     <section class="banner-section">
       <div class="banner-wrppr2">
         <div class="container">
-        <div class="banner-content">
-          <h1>Contact Us</h1>
-          <p>
-            Home
-            <span class="arrow">
-              <img src="./assets/icons/mdi_arrow-right-thin.png" alt="" />
-            </span>
-            Contact Us
-          </p>
+          <div class="banner-content">
+            <h1>Contact Us</h1>
+            <p>
+              Home
+              <span class="arrow">
+                <img src="./assets/icons/mdi_arrow-right-thin.png" alt="" />
+              </span>
+              Contact Us
+            </p>
+          </div>
         </div>
-      </div>
       </div>
     </section>
 

@@ -21,6 +21,40 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("✅ Added .active to:", href);
     }
   });
+
+  // Swiper for Teams Section
+  if (window.Swiper) {
+    new Swiper(".teams-section-cards.swiper-container", {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      // Removed navigation and pagination options
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          centeredSlides: true,
+        },
+        576: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 60,
+        },
+      },
+    });
+  }
 });
 
 function animateCounter(element, target, duration = 1500) {
@@ -54,19 +88,45 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.querySelector(".close-menu");
   const menuLinks = document.querySelectorAll(".mobile-menu-content a");
 
-  if (!hamburger || !mobileOverlay) {
-    console.error("Hamburger or overlay not found!");
-    return;
+  function openMenu() {
+    hamburger.classList.add("open");
+    mobileOverlay.classList.add("active");
+    document.body.classList.add("no-scroll", "menu-open");
   }
 
-  function toggleMenu() {
-    hamburger.classList.toggle("open");
-    mobileOverlay.classList.toggle("active");
+  function closeMenu() {
+    hamburger.classList.remove("open");
+    mobileOverlay.classList.remove("active");
+    document.body.classList.remove("no-scroll", "menu-open");
   }
 
-  hamburger.addEventListener("click", toggleMenu);
-  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
-  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+  if (hamburger && mobileOverlay) {
+    hamburger.addEventListener("click", function () {
+      if (mobileOverlay.classList.contains("active")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
+  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+  mobileOverlay.addEventListener("click", (e) => {
+    if (e.target === mobileOverlay) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileOverlay.classList.contains("active")) {
+      closeMenu();
+    }
+  });
 });
 
 

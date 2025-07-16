@@ -48,6 +48,10 @@
   color: var(--color-dark-grey-3);
 }
 
+.get-in-touch-content-header:hover .divider1{
+  width: 65px;
+}
+
 .get-in-touch-content-left > h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 48px;
@@ -251,6 +255,10 @@ input[type="email"]::placeholder {
   font-size: 20px;
   font-weight: 600;
   color: var(--color-dark-grey-3);
+}
+
+.faq-content-header:hover  .divider1{
+  width: 65px;
 }
 
 .faq-content > h3 {

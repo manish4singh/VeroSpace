@@ -24,63 +24,46 @@
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
   </head>
   <body>
+    <div class="mobile-overlay">
+      <button class="close-menu">×</button>
+      <div class="mobile-menu-content">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+          <li>
+            <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Header Section -->
     <header class="header-section">
       <div class="container">
         <div class="row">
-          <div class="navbar">
-            <!-- Hamburger Menu button -->
+          <nav class="navbar">
+            <a href="index.html" class="navbar-brand">
+              <img src="./assets/logos/Group 24.png" alt="" />
+            </a>
             <div class="menu" id="menu">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <nav class="nav-left">
-              <ul>
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li>
-                  <a href="properties.html" class="nav-link">Properties</a>
-                </li>
-              </ul>
-            </nav>
-            <a href="/" class="nav-logo">
-              <img src="./assets/logos/Group 24.png" alt="VeroSpace Logo" />
-            </a>
-            <nav class="nav-right">
-              <ul>
-                <li>
-                  <a href="contact-us.html" class="nav-link">Contact us</a>
-                </li>
-                <li>
-                  <a class="btn-login" id="loginBtn" href="#">Login</a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="mobile-overlay">
-              <button class="close-menu">×</button>
-              <div class="mobile-menu-content">
-                <ul>
-                  <li><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="about.html" class="nav-link">About Us</a></li>
-                  <li>
-                    <a href="properties.html" class="nav-link">Properties</a>
-                  </li>
-                  <li>
-                    <a href="contact-us.html">Contact us</a>
-                  </li>
-                  <li>
-                    <a class="btn-login" id="mobileLoginBtn" href="#">Login</a>
-                  </li>
-                </ul>
-              </div>
+            <ul class="nav-links">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="about.html">About Us</a></li>
+              <li><a class="nav-link" href="properties.html">Properties</a></li>
+            </ul>
+            <div class="nav-btns">
+              <a href="contact-us.html">Contact Us</a>
+              <a href="#" class="btn-login" id="loginBtn">Login</a>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
-
     <!-- Banner Section -->
 
     <section class="banner-section">
@@ -271,7 +254,7 @@
             <div class="about-text-content">
               <div class="about-text-header">
                 <div class="divider1"></div>
-                <a href="#">About Us</a>
+                <a href="#url">About Us</a>
               </div>
               <h3>Welcome To VeroSpace, Your Trusted Real Estate Expert.</h3>
               <p>
@@ -343,7 +326,7 @@
               <div class="properties-content-header">
                 <div class="properties-section-header">
                   <div class="divider1"></div>
-                  <a href="#">Recently Added</a>
+                  <a href="#url">Recently Added</a>
                 </div>
                 <h3>Explore Our Newly Listed Properties</h3>
               </div>
@@ -773,7 +756,7 @@
             <div class="services-section-content">
               <div class="services-section-header">
                 <div class="divider1"></div>
-                <a href="#">Other Services</a>
+                <a href="#url">Other Services</a>
               </div>
               <h3>We Make Sell Or Rent Your Property Simple and Profitable.</h3>
               <p>
@@ -802,7 +785,7 @@
           <div class="testimonials-section-content">
             <div class="testimonials-section-header">
               <div class="divider1"></div>
-              <a href="#">Testimonials</a>
+              <a href="#url">Testimonials</a>
             </div>
             <h3>What Our Customer Says</h3>
           </div>
