@@ -1956,3 +1956,12 @@ input[type="range"]::-webkit-slider-thumb {
   font-weight: 600;
   color: var(--color-dark-grey-1);
 }
+
+.floating-search-divider {
+  width: 2px;
+  height: 80px;
+  background: #e2e8f0;
+  margin: 0 32px;
+  border-radius: 2px;
+  align-self: center;
+}
