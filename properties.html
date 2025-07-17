@@ -65,8 +65,12 @@
               <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="properties.html" class="nav-link">Properties</a></li>
-                <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                <li>
+                  <a href="properties.html" class="nav-link">Properties</a>
+                </li>
+                <li>
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
                 <li>
                   <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
                 </li>
@@ -396,46 +400,26 @@
               </div>
               <!-- Amenities Filter -->
               <div class="filter-dropdown-group">
-                <button
-                  class="dropdown-toggle"
-                  onclick="toggleDropdown('amenitiesDropdown')"
-                >
-                  Amenities <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-content" id="amenitiesDropdown">
-                  <label
-                    ><input type="checkbox" value="supermarket" /> Near Super
-                    Market</label
-                  >
-                  <label
-                    ><input type="checkbox" value="hospital" /> Near
-                    Hospital</label
-                  >
-                  <label
-                    ><input type="checkbox" value="internet" /> Internet</label
-                  >
-                  <label
-                    ><input type="checkbox" value="kidzones" /> Kid Zones</label
-                  >
-                </div>
+                <select id="amenitiesDropdownSelect" class="property-select-dropdown" name="amenities">
+                  <option value="">Amenities</option>
+                  <option value="supermarket">Near Super Market</option>
+                  <option value="hospital">Near Hospital</option>
+                  <option value="internet">Internet</option>
+                  <option value="kidzones">Kid Zones</option>
+                </select>
               </div>
               <!-- Bedrooms Filter -->
               <div class="filter-dropdown-group">
-                <button
-                  class="dropdown-toggle"
-                  onclick="toggleDropdown('bedroomDropdown')"
-                >
-                  Bedrooms <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="dropdown-content" id="bedroomDropdown">
-                  <label><input type="checkbox" value="1" /> Room 1</label>
-                  <label><input type="checkbox" value="2" /> Room 2</label>
-                  <label><input type="checkbox" value="3" /> Room 3</label>
-                  <label><input type="checkbox" value="4" /> Room 4</label>
-                  <label><input type="checkbox" value="5" /> Room 5</label>
-                  <label><input type="checkbox" value="6" /> Room 6</label>
-                  <label><input type="checkbox" value="7" /> Room 7</label>
-                </div>
+                <select id="bedroomDropdownSelect" class="property-select-dropdown" name="bedrooms">
+                  <option value="">Bedrooms</option>
+                  <option value="1">Room 1</option>
+                  <option value="2">Room 2</option>
+                  <option value="3">Room 3</option>
+                  <option value="4">Room 4</option>
+                  <option value="5">Room 5</option>
+                  <option value="6">Room 6</option>
+                  <option value="7">Room 7</option>
+                </select>
               </div>
               <!-- Apply Button -->
               <button class="property-apply-btn" style="margin-top: 12px">
@@ -678,7 +662,7 @@
                   <div class="property-card-features">
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/beds.png"
+                        src="./assets/icons/beds.png"
                         class="property-feature-icon"
                         alt=""
                       />
@@ -686,7 +670,7 @@
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/baths.png"
+                        src="./assets/icons/baths.png"
                         class="property-feature-icon"
                         alt=""
                       />
@@ -694,7 +678,7 @@
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/area.png"
+                        src="./assets/icons/area.png"
                         class="property-feature-icon"
                         alt=""
                       />
@@ -762,27 +746,27 @@
                   <div class="property-card-features">
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/beds.png"
+                        src="./assets/icons/beds.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>3 Bed</span>
+                      <span>4 Bed</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/baths.png"
+                        src="./assets/icons/baths.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>2 Bath</span>
+                      <span>3 Bath</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/area.png"
+                        src="./assets/icons/area.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>900 sqft</span>
+                      <span>1500 sqft</span>
                     </div>
                   </div>
                   <div class="property-card-footer">
@@ -849,27 +833,27 @@
                   <div class="property-card-features">
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/beds.png"
+                        src="./assets/icons/beds.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>5 Bed</span>
+                      <span>4 Bed</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/baths.png"
+                        src="./assets/icons/baths.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>4 Bath</span>
+                      <span>3 Bath</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/area.png"
+                        src="./assets/icons/area.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>1800 sqft</span>
+                      <span>1500 sqft</span>
                     </div>
                   </div>
                   <div class="property-card-footer">
@@ -933,27 +917,27 @@
                   <div class="property-card-features">
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/beds.png"
+                        src="./assets/icons/beds.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>3 Bed</span>
+                      <span>4 Bed</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/baths.png"
+                        src="./assets/icons/baths.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>2 Bath</span>
+                      <span>3 Bath</span>
                     </div>
                     <div class="property-feature">
                       <img
-                        src="./img/property-detail-images/area.png"
+                        src="./assets/icons/area.png"
                         class="property-feature-icon"
                         alt=""
                       />
-                      <span>1000 sqft</span>
+                      <span>1500 sqft</span>
                     </div>
                   </div>
                   <div class="property-card-footer">
@@ -1182,10 +1166,17 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- AOS JS LIBRARY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script>
       console.log("AOS in HTML:", typeof AOS);
-      AOS.init();
+      window.addEventListener('load', function() {
+        AOS.init();
+      });
     </script>
   </body>
 </html>

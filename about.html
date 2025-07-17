@@ -702,7 +702,9 @@
     ></script>
     <script>
       console.log("AOS in HTML:", typeof AOS);
-      AOS.init();
+      window.addEventListener('load', function() {
+        AOS.init();
+      });
     </script>
   </body>
 </html>

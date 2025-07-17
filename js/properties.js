@@ -6,7 +6,6 @@ function toggleDropdown(dropdownId) {
   const dropdown = document.getElementById(dropdownId);
   if (dropdown) {
     dropdown.classList.toggle("show");
-    dropdown.style.zIndex = "1000"; // Ensure the dropdown is above other content
     // Also toggle active state on the button for styling (e.g., rotating arrow)
     const button = dropdown.previousElementSibling;
     if (button) {
