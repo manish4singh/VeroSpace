@@ -11,7 +11,7 @@
     padding: 17px 20px;
   }
   .banner-content {
-    margin-top: 100px;
+    margin-top: 20px;
   }
 
   .banner-content > h1 {
@@ -23,7 +23,7 @@
     z-index: 10;
   }
 
-  .floating-search-divider{
+  .floating-search-divider {
     display: none;
   }
 
@@ -176,7 +176,7 @@
   }
   .property-select-dropdown,
   .dropdown-toggle {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   .overlay {
@@ -192,12 +192,16 @@
   .bottom-img2 > img,
   .commitment-image-container > img,
   .commitment-image-container {
-    border-radius:30px;
+    border-radius: 30px;
   }
 
   .banner-wrppr,
-  .banner-wrppr1 {
+  .banner-wrppr1,.banner-wrppr2{
     border-radius: 15px;
+  }
+  
+  .btn-search{
+    margin-top: 15px;
   }
 
 }
@@ -392,7 +396,7 @@
   }
 
   .header-section > div > div {
-    padding: 15px;
+    margin: 15px 0;
   }
   .banner-content {
     margin-top: 30px;
@@ -583,14 +587,13 @@
   .bottom-img2 > img,
   .commitment-image-container > img,
   .commitment-image-container {
-    border-radius:25px;
+    border-radius: 25px;
   }
 
   .banner-wrppr,
   .banner-wrppr1 {
     border-radius: 10px;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -1002,7 +1005,7 @@
   .testimonials-section-header > a,
   .commitment-section-header > a,
   .teams-section-header > a,
-  .get-in-touch-content-header > span{
+  .get-in-touch-content-header > span {
     font-size: 18px;
   }
 
@@ -1011,9 +1014,8 @@
   .bottom-img2 > img,
   .commitment-image-container > img,
   .commitment-image-container {
-    border-radius:20px;
+    border-radius: 20px;
   }
-
 }
 
 @media screen and (max-width: 400px) {
@@ -1095,6 +1097,6 @@
   .bottom-img2 > img,
   .commitment-image-container > img,
   .commitment-image-container {
-    border-radius:15px;
+    border-radius: 15px;
   }
 }
