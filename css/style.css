@@ -204,6 +204,10 @@ a:hover {
   display: none;
 }
 
+.mobile-overlay {
+  z-index: 10000;
+}
+
 .mobile-overlay.active {
   display: flex;
 }
