@@ -258,7 +258,6 @@
 
   .col-20 {
     width: 30% !important;
-    margin: 0 auto;
   }
 
   .apartment-content > h3 {
@@ -1021,6 +1020,15 @@
   .commitment-image-container > img,
   .commitment-image-container {
     border-radius: 20px;
+  }
+
+  .footer-left,.footer-center,.footer-right {
+    text-align: center;
+    align-items: center !important;
+  }
+  
+  .property-image-row{
+    justify-content: center !important;
   }
 }
 
