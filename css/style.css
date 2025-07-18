@@ -1246,6 +1246,7 @@ input[type="range"]::-webkit-slider-thumb {
   padding: 22px 21px 19px 21px;
   border-radius: 25px;
   gap: 10px;
+  min-height: 110px;
 }
 .txt-overlay-row1 {
   display: flex;
@@ -1316,7 +1317,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 35px;
+  padding-block: 70px;
 }
 
 .services-section > div > div {
@@ -1455,7 +1456,7 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--color-off-white-2);
   margin: 0 auto;
   border-radius: 40px;
-  padding: 15px 0;
+  padding: 30px 0;
 }
 
 .testimonials-section-content {

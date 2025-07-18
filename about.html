@@ -25,6 +25,9 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/pages/about-us.css" />
@@ -80,7 +83,7 @@
     <section class="banner-section">
       <div class="banner-wrppr1">
         <div class="container">
-          <div class="banner-content">
+          <div class="banner-content aos-init aos-animate" data-aos="fade-up" data-aos-duration="500">
             <h1>About Us</h1>
             <p>
               <a href="index.html">Home</a>
@@ -99,7 +102,7 @@
     <section class="apartment-section">
       <div class="container">
         <div class="about-us-section-content">
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-right" data-aos-duration="500">
             <div class="image-container">
               <div class="top-img2">
                 <img src="./assets/Rectangle 61.png" alt="" />
@@ -115,7 +118,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-left" data-aos-duration="500">
             <div class="about-text-content">
               <div class="about-text-header">
                 <div class="divider1"></div>
@@ -193,12 +196,12 @@
     <section class="commitment-section">
       <div class="container">
         <div class="commitment-content">
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-right" data-aos-duration="500">
             <div class="commitment-image-container">
               <img src="./assets/Rectangle 64.png" alt="" />
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-6" data-aos="fade-left" data-aos-duration="500">
             <div class="commitment-text-content">
               <div class="commitment-section-header">
                 <div class="divider1"></div>
@@ -232,7 +235,7 @@
     </section>
 
     <!-- Teams Section -->
-    <section class="teams-section">
+    <section class="teams-section" data-aos="fade-left" data-aos-duration="500">
       <div class="teams-wrppr">
         <div class="container">
           <div class="teams-section-content">
@@ -507,7 +510,7 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer-section" data-aos="fade-up" data-aos-duration="500">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -677,11 +680,12 @@
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/about.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/AOS.js"></script>
+ 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Splide JS -->
-    <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   </body>
 </html>

@@ -330,6 +330,7 @@
   padding: 12px 19px 13px 20px;
   border-radius: 25px;
   gap: 10px;
+  min-height: 110px;
 }
 
 .txt-overlay-row {

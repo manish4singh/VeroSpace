@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="./css/pages/about-us.css" />
     <link rel="stylesheet" href="./css/pages/contact-us.css" />
     <!-- Remove GSAP and ScrollTrigger CDN -->
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   </head>
   <body>
     <header class="header-section">
@@ -78,7 +80,7 @@
     <section class="banner-section">
       <div class="banner-wrppr2">
         <div class="container">
-          <div class="banner-content">
+          <div class="banner-content aos-init aos-animate" data-aos="fade-up" data-aos-duration="500">
             <h1>Contact Us</h1>
             <p>
               Home
@@ -95,7 +97,7 @@
     <section class="get-in-touch-section">
       <div class="container">
         <div class="get-in-touch-content">
-          <div class="col-5">
+          <div class="col-5" data-aos="fade-right" data-aos-duration="500">
             <div class="get-in-touch-content-left">
               <div class="get-in-touch-content-header">
                 <div class="divider1"></div>
@@ -148,7 +150,7 @@
               </div>
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-7" data-aos="fade-left" data-aos-duration="500">
             <div class="contact-form-area">
               <form id="contactForm">
                 <div class="form-row1">
@@ -212,7 +214,7 @@
         </div>
       </div>
     </section>
-    <section class="faq-section">
+    <section class="faq-section" data-aos="fade-right" data-aos-duration="500">
       <div class="container">
         <div class="col-6">
           <div class="faq-content">
@@ -377,7 +379,7 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer class="footer-section" data-aos="fade-up" data-aos-duration="500">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -547,11 +549,9 @@
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/contact-us.js"></script>
-
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Splide JS -->
-    <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/AOS.js"></script>
   </body>
 </html>

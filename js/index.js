@@ -112,7 +112,10 @@ navLinks.forEach((link) => {
 
 // Handle Contact Us link in nav-btns section
 if (contactUsLink) {
-  const contactUsPath = contactUsLink.getAttribute("href").replace(/\/$/, "").toLowerCase();
+  const contactUsPath = contactUsLink
+    .getAttribute("href")
+    .replace(/\/$/, "")
+    .toLowerCase();
   if (currentPath.endsWith(contactUsPath)) {
     contactUsLink.classList.add("active");
   }
@@ -128,20 +131,20 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.classList.add("open");
     mobileOverlay.classList.add("active");
     document.body.classList.add("no-scroll", "menu-open");
-    var floatingSearch = document.querySelector('.floating-search');
-    if (floatingSearch) floatingSearch.style.display = 'none';
-    var floatingSearch1 = document.querySelector('.floating-search1');
-    if (floatingSearch1) floatingSearch1.style.display = 'none';
+    var floatingSearch = document.querySelector(".floating-search");
+    if (floatingSearch) floatingSearch.style.display = "none";
+    var floatingSearch1 = document.querySelector(".floating-search1");
+    if (floatingSearch1) floatingSearch1.style.display = "none";
   }
 
   function closeMenu() {
     hamburger.classList.remove("open");
     mobileOverlay.classList.remove("active");
     document.body.classList.remove("no-scroll", "menu-open");
-    var floatingSearch = document.querySelector('.floating-search');
-    if (floatingSearch) floatingSearch.style.display = '';
-    var floatingSearch1 = document.querySelector('.floating-search1');
-    if (floatingSearch1) floatingSearch1.style.display = '';
+    var floatingSearch = document.querySelector(".floating-search");
+    if (floatingSearch) floatingSearch.style.display = "";
+    var floatingSearch1 = document.querySelector(".floating-search1");
+    if (floatingSearch1) floatingSearch1.style.display = "";
   }
 
   if (hamburger && mobileOverlay) {
@@ -205,6 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
       grabCursor: true,
       watchOverflow: true,
 
+      on: {
+        init: function () {
+          AOS.refresh();
+        },
+        slideChange: function () {
+          AOS.refresh();
+        },
+      },
+
       breakpoints: {
         // Mobile devices
         0: {
@@ -254,6 +266,16 @@ document.addEventListener("DOMContentLoaded", () => {
         el: ".swiper-pagination",
         clickable: true,
       },
+
+      on: {
+        init: function () {
+          AOS.refresh();
+        },
+        slideChange: function () {
+          AOS.refresh();
+        },
+      },
+
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -293,6 +315,6 @@ setTimeout(() => {
   }
 }, 1000);
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Remove all GSAP and ScrollTrigger animation logic
 });

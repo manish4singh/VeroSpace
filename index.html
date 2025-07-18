@@ -23,8 +23,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
     <!-- Remove GSAP and ScrollTrigger CDN -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script> -->
+    <!-- AOS CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   </head>
   <body>
     <header class="header-section">
@@ -55,8 +55,12 @@
               <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="properties.html" class="nav-link">Properties</a></li>
-                <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                <li>
+                  <a href="properties.html" class="nav-link">Properties</a>
+                </li>
+                <li>
+                  <a href="contact-us.html" class="nav-link">Contact Us</a>
+                </li>
                 <li>
                   <a href="#" class="btn-login" id="mobileLoginBtn">Login</a>
                 </li>
@@ -71,14 +75,23 @@
     <section class="banner-section">
       <div class="banner-wrppr">
         <div class="container">
-          <div class="banner-content">
+          <div
+            class="banner-content aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <h1>
               Perfect Platform For Buying Or <br />
               Renting <span>Houses, Flats, And Villas</span>
             </h1>
             <p>Search thousands of homes. Find the one that fits you.</p>
           </div>
-          <div class="floating-search">
+          <div
+            class="floating-search aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-duration="500"
+            style="opacity: 1; transform: none"
+          >
             <div class="form-area">
               <form action="">
                 <div class="form-row">
@@ -183,7 +196,12 @@
 
     <!-- Apartment Section -->
 
-    <section class="apartment-section">
+    <section
+      class="apartment-section aos-init aos-animate"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      style="opacity: 1; transform: none"
+    >
       <div class="container">
         <div class="apartment-content">
           <h3>Explore Apartment Types</h3>
@@ -243,7 +261,11 @@
     <section class="about-section">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div
+            class="col-6 aos-init aos-animate"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             <div class="image-container">
               <div class="bottom-img">
                 <img src="./assets/image.png" alt="" />
@@ -253,7 +275,11 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div
+            class="col-6 aos-init aos-animate"
+            data-aos="fade-left"
+            data-aos-duration="500"
+          >
             <div class="about-text-content">
               <div class="about-text-header">
                 <div class="divider1"></div>
@@ -321,7 +347,11 @@
 
     <!-- Properties Section -->
 
-    <section class="properties-section">
+    <section
+      class="properties-section aos-init aos-animate"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
       <div class="properties-wrppr">
         <div class="container">
           <div class="row">
@@ -745,7 +775,11 @@
     <section class="services-section">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div
+            class="col-6 aos-init aos-animate"
+            data-aos="fade-right"
+            data-aos-duration="500"
+          >
             <div class="image-container1">
               <div class="top-img1">
                 <img src="./assets/Rectangle 38.png" alt="" />
@@ -755,7 +789,11 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div
+            class="col-6 aos-init aos-animate"
+            data-aos="fade-left"
+            data-aos-duration="500"
+          >
             <div class="services-section-content">
               <div class="services-section-header">
                 <div class="divider1"></div>
@@ -782,7 +820,11 @@
 
     <!-- Testimonials Section -->
 
-    <section class="testimonials-section">
+    <section
+      class="testimonials-section aos-init aos-animate"
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
       <div class="testimonials-wrppr">
         <div class="container">
           <div class="testimonials-section-content">
@@ -1077,7 +1119,11 @@
               <img src="./assets/company-logos/image 192.png" alt="" />
             </div>
           </div>
-          <div class="newsletter-area">
+          <div
+            class="newsletter-area aos-init aos-animate"
+            data-aos="fade-up"
+            data-aos-duration="500"
+          >
             <div class="newsletter-area-header">
               <h5>Newsletter To Get Updated The Latest News</h5>
             </div>
@@ -1097,7 +1143,11 @@
       </div>
     </section>
 
-    <footer class="footer-section">
+    <footer
+      class="footer-section aos-init aos-animate"
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -1264,11 +1314,15 @@
       </div>
     </div>
 
-    <!-- Local JS files-->
+    <!-- AOS CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
+    <!-- Local JS files-->
+    <script src="./js/AOS.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
   </body>
 </html>
