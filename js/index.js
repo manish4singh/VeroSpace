@@ -128,12 +128,20 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburger.classList.add("open");
     mobileOverlay.classList.add("active");
     document.body.classList.add("no-scroll", "menu-open");
+    var floatingSearch = document.querySelector('.floating-search');
+    if (floatingSearch) floatingSearch.style.display = 'none';
+    var floatingSearch1 = document.querySelector('.floating-search1');
+    if (floatingSearch1) floatingSearch1.style.display = 'none';
   }
 
   function closeMenu() {
     hamburger.classList.remove("open");
     mobileOverlay.classList.remove("active");
     document.body.classList.remove("no-scroll", "menu-open");
+    var floatingSearch = document.querySelector('.floating-search');
+    if (floatingSearch) floatingSearch.style.display = '';
+    var floatingSearch1 = document.querySelector('.floating-search1');
+    if (floatingSearch1) floatingSearch1.style.display = '';
   }
 
   if (hamburger && mobileOverlay) {
@@ -282,6 +290,9 @@ document.addEventListener("DOMContentLoaded", () => {
 setTimeout(() => {
   if (document.readyState === "complete") {
     console.log("Fallback initialization...");
-    initHamburgerMenu();
   }
 }, 1000);
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Remove all GSAP and ScrollTrigger animation logic
+});

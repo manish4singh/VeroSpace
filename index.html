@@ -13,15 +13,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- AOS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <!-- Swiper CDN -->
     <link
       rel="stylesheet"
@@ -31,6 +22,9 @@
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
+    <!-- Remove GSAP and ScrollTrigger CDN -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script> -->
   </head>
   <body>
     <header class="header-section">
@@ -74,7 +68,7 @@
     </header>
     <!-- Banner Section -->
 
-    <section class="banner-section" data-aos="fade-up">
+    <section class="banner-section">
       <div class="banner-wrppr">
         <div class="container">
           <div class="banner-content">
@@ -84,7 +78,7 @@
             </h1>
             <p>Search thousands of homes. Find the one that fits you.</p>
           </div>
-          <div class="floating-search" data-aos="zoom-in">
+          <div class="floating-search">
             <div class="form-area">
               <form action="">
                 <div class="form-row">
@@ -189,7 +183,7 @@
 
     <!-- Apartment Section -->
 
-    <section class="apartment-section" data-aos="fade-up">
+    <section class="apartment-section">
       <div class="container">
         <div class="apartment-content">
           <h3>Explore Apartment Types</h3>
@@ -246,10 +240,10 @@
 
     <!-- About Section -->
 
-    <section class="about-section" data-aos="fade-left">
+    <section class="about-section">
       <div class="container">
         <div class="row">
-          <div class="col-6" data-aos="fade-right">
+          <div class="col-6">
             <div class="image-container">
               <div class="bottom-img">
                 <img src="./assets/image.png" alt="" />
@@ -259,7 +253,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6" data-aos="fade-left">
+          <div class="col-6">
             <div class="about-text-content">
               <div class="about-text-header">
                 <div class="divider1"></div>
@@ -327,7 +321,7 @@
 
     <!-- Properties Section -->
 
-    <section class="properties-section" data-aos="fade-up">
+    <section class="properties-section">
       <div class="properties-wrppr">
         <div class="container">
           <div class="row">
@@ -748,10 +742,10 @@
 
     <!-- Services Section -->
 
-    <section class="services-section" data-aos="fade-up">
+    <section class="services-section">
       <div class="container">
         <div class="row">
-          <div class="col-6" data-aos="fade-right">
+          <div class="col-6">
             <div class="image-container1">
               <div class="top-img1">
                 <img src="./assets/Rectangle 38.png" alt="" />
@@ -761,7 +755,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6" data-aos="fade-left">
+          <div class="col-6">
             <div class="services-section-content">
               <div class="services-section-header">
                 <div class="divider1"></div>
@@ -788,7 +782,7 @@
 
     <!-- Testimonials Section -->
 
-    <section class="testimonials-section" data-aos="fade-up">
+    <section class="testimonials-section">
       <div class="testimonials-wrppr">
         <div class="container">
           <div class="testimonials-section-content">
@@ -1062,7 +1056,7 @@
 
     <!-- Companies Section -->
 
-    <section class="companies-section" data-aos="fade-up">
+    <section class="companies-section">
       <div class="container">
         <div class="companies-section-content">
           <h5>Trusted by 200+ Companies</h5>
@@ -1083,7 +1077,7 @@
               <img src="./assets/company-logos/image 192.png" alt="" />
             </div>
           </div>
-          <div class="newsletter-area" data-aos="fade-up">
+          <div class="newsletter-area">
             <div class="newsletter-area-header">
               <h5>Newsletter To Get Updated The Latest News</h5>
             </div>
@@ -1103,7 +1097,7 @@
       </div>
     </section>
 
-    <footer class="footer-section" data-aos="fade-up">
+    <footer class="footer-section">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -1274,15 +1268,6 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
-    <!-- AOS JS LIBRARY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-      console.log("AOS in HTML:", typeof AOS);
-      window.addEventListener('load', function() {
-        AOS.init();
-      });
-    </script>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

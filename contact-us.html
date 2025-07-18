@@ -30,14 +30,7 @@
     <link rel="stylesheet" href="./css/responsiveCSS.css" />
     <link rel="stylesheet" href="./css/pages/about-us.css" />
     <link rel="stylesheet" href="./css/pages/contact-us.css" />
-    <!-- AOS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Remove GSAP and ScrollTrigger CDN -->
   </head>
   <body>
     <header class="header-section">
@@ -99,10 +92,10 @@
       </div>
     </section>
 
-    <section class="get-in-touch-section" data-aos="fade-up">
+    <section class="get-in-touch-section">
       <div class="container">
         <div class="get-in-touch-content">
-          <div class="col-5" data-aos="fade-right">
+          <div class="col-5">
             <div class="get-in-touch-content-left">
               <div class="get-in-touch-content-header">
                 <div class="divider1"></div>
@@ -155,7 +148,7 @@
               </div>
             </div>
           </div>
-          <div class="col-7" data-aos="fade-left">
+          <div class="col-7">
             <div class="contact-form-area">
               <form id="contactForm">
                 <div class="form-row1">
@@ -219,7 +212,7 @@
         </div>
       </div>
     </section>
-    <section class="faq-section" data-aos="fade-right">
+    <section class="faq-section">
       <div class="container">
         <div class="col-6">
           <div class="faq-content">
@@ -384,7 +377,7 @@
       </div>
     </section>
 
-    <footer class="footer-section" data-aos="fade-up">
+    <footer class="footer-section">
       <div class="container">
         <div class="footer-content">
           <div class="footer-top">
@@ -560,13 +553,5 @@
     <!-- Splide JS -->
     <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <!-- AOS JS LIBRARY -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-      console.log("AOS in HTML:", typeof AOS);
-      window.addEventListener('load', function() {
-        AOS.init();
-      });
-    </script>
   </body>
 </html>
