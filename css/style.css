@@ -985,7 +985,7 @@ input[type="range"]::-webkit-slider-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-block: 50px;
+  padding-block: 130px;
 }
 
 .about-section > div > div {
