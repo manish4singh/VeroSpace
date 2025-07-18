@@ -12,10 +12,12 @@
 html,
 body {
   overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
 }
 
 body.no-scroll {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 /* Column CSS code */
@@ -258,7 +260,8 @@ a:hover {
 
 .nav-link:hover {
   color: var(--color-accent);
-  background: var(--color-mid-grey-2);
+  background: yellow;
+  border-radius: 15px;
 }
 
 .nav-link.active {
@@ -297,6 +300,7 @@ a:hover {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  overflow-y: auto !important;
 }
 
 .modal-overlay.active {
@@ -500,6 +504,7 @@ a:hover {
   min-height: 662px;
   position: relative;
   border-radius: 40px;
+  padding-bottom: 120px;
 }
 
 .banner-content {
@@ -887,7 +892,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-block: 60px;
+  padding-block: 130px;
 }
 
 .apartment-content {

@@ -32,7 +32,6 @@ function hideLabels() {
 }
 
 [minRange, maxRange].forEach((input) => {
-  input.addEventListener("mousedown", showLabels);
   input.addEventListener("touchstart", showLabels);
   input.addEventListener("mouseup", hideLabels);
   input.addEventListener("touchend", hideLabels);
@@ -315,6 +314,10 @@ setTimeout(() => {
   }
 }, 1000);
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Remove all GSAP and ScrollTrigger animation logic
+Array.from(document.querySelectorAll("*")).filter((el) => {
+  const style = getComputedStyle(el);
+  return (
+    (style.overflowY === "auto" || style.overflowY === "scroll") &&
+    el.scrollHeight > el.clientHeight
+  );
 });
