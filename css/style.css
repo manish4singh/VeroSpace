@@ -1358,7 +1358,7 @@ input[type="range"]::-webkit-slider-thumb {
 .bottom-img1 {
   position: absolute;
   bottom: -55px;
-  left: -35px;
+  left: -30px;
   border-radius: 25px;
   border: 10px solid var(--color-white);
   max-width: 50%;
