@@ -258,6 +258,7 @@ a:hover {
 
 .nav-link:hover {
   color: var(--color-accent);
+  background: var(--color-mid-grey-2);
 }
 
 .nav-link.active {
@@ -525,7 +526,7 @@ a:hover {
   padding: 0 10px;
 }
 
-.banner-content > p {
+.banner-content > p,.banner-content > p>a {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
