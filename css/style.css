@@ -886,6 +886,7 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: center;
   align-items: center;
   position: relative;
+  padding-block: 60px;
 }
 
 .apartment-content {
@@ -1000,7 +1001,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .image-container {
-  max-width: 90%;
+  max-width: 85%;
   position: relative;
   margin: 0 auto;
 }
