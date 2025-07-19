@@ -23,6 +23,18 @@
   align-items: center;
   width: 100%;
   border-radius: 40px;
+  overflow: hidden;
+}
+.banner-wrppr1::-webkit-scrollbar {
+  display: none;
+}
+.banner-wrppr1 {
+  scrollbar-width: none;
+}
+
+.banner-section {
+  min-height: 500px;
+  position: relative;
 }
 
 .about-us-section {
@@ -424,19 +436,11 @@
   left: 10px;
 }
 
-.apartment-section,
-.commitment-section,
-.teams-section,
-.companies-section {
-  min-height: unset !important;
-  padding-block: 40px !important;
-}
+
 
 .banner-wrppr1,
 .banner-wrppr2,
 .banner-wrppr {
-  overflow-y: visible !important;
-  overflow-x: visible !important;
   height: auto !important;
   max-height: none !important;
 }
