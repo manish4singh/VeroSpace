@@ -23,19 +23,9 @@
   align-items: center;
   width: 100%;
   border-radius: 40px;
-  overflow: hidden;
-}
-.banner-wrppr1::-webkit-scrollbar {
-  display: none;
-}
-.banner-wrppr1 {
-  scrollbar-width: none;
-}
-
-.banner-section {
-  min-height: 500px;
   position: relative;
 }
+
 
 .about-us-section {
   min-height: 616px;
@@ -214,19 +204,26 @@
 
 .mission-vision-area {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   max-width: 100%;
 }
 
-.vision-area,
-.mission-area {
+.vision-area {
   width: 243px;
   height: 128px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.mission-area{
+  width: 243px;
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 30px;
 }
 
 .vision-area > h4,
@@ -438,9 +435,3 @@
 
 
 
-.banner-wrppr1,
-.banner-wrppr2,
-.banner-wrppr {
-  height: auto !important;
-  max-height: none !important;
-}

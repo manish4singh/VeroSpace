@@ -7,11 +7,9 @@
   align-items: center;
   width: 100%;
   border-radius: 40px;
-}
-.banner-section {
-  min-height: 500px;
   position: relative;
 }
+
 
 .get-in-touch-section {
   max-width: 100%;

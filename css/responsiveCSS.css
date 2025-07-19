@@ -204,6 +204,24 @@
   .btn-search {
     margin-top: 15px;
   }
+
+  .commitment-text-content > p {
+    font-size: 16px;
+    margin-block: 10px 20px;
+  }
+
+  .vision-area, .mission-area{
+    text-align: center;
+  }
+
+  .vision-area > h4, .mission-area > h4{
+    font-size: 18px;
+  }
+
+  .vision-area > p, .mission-area > p{
+    font-size: 15px;
+  }
+
 }
 @media screen and (max-width: 768px) {
   .col-1,
@@ -600,7 +618,7 @@
     top: 10px;
   }
 
-  .header-section>div{
+  .header-section > div {
     padding: 0;
   }
 
@@ -1022,12 +1040,14 @@
     border-radius: 20px;
   }
 
-  .footer-left,.footer-center,.footer-right {
+  .footer-left,
+  .footer-center,
+  .footer-right {
     text-align: center;
     align-items: center !important;
   }
-  
-  .property-image-row{
+
+  .property-image-row {
     justify-content: center !important;
   }
 }
@@ -1050,7 +1070,6 @@
   .testimonial-card > p {
     font-size: 7px;
   }
-  
 
   .stats-row {
     flex-direction: column;

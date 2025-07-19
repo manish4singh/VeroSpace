@@ -54,12 +54,6 @@
   border-radius: 40px;
   overflow: hidden;
 }
-.banner-wrppr2::-webkit-scrollbar {
-  display: none;
-}
-.banner-wrppr2 {
-  scrollbar-width: none;
-}
 
 .banner-content > p > span {
   display: inline-block;
@@ -937,17 +931,4 @@ input[type="checkbox"] {
 /* Class to show the dropdown content */
 .dropdown-content.show {
   display: block;
-}
-
-
-.banner-wrppr1,
-.banner-wrppr2,
-.banner-wrppr {
-  height: auto !important;
-  max-height: none !important;
-}
-
-.banner-section {
-  min-height: 500px;
-  position: relative;
 }
