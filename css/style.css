@@ -281,6 +281,10 @@ a:hover {
   text-transform: uppercase;
 }
 
+.btn-login:hover{
+  background: #09052099;
+}
+
 /* Modals */
 
 /* Other existing styles in style.css */
