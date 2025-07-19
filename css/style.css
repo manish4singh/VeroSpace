@@ -262,7 +262,6 @@ a:hover {
   color: var(--color-accent);
   background: yellow;
   border-radius: 15px;
-
 }
 
 .nav-link.active {
@@ -281,7 +280,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.btn-login:hover{
+.btn-login:hover {
   background: #09052099;
 }
 
@@ -536,7 +535,8 @@ a:hover {
   padding: 0 10px;
 }
 
-.banner-content > p,.banner-content > p>a {
+.banner-content > p,
+.banner-content > p > a {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -943,10 +943,15 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: space-evenly;
   padding: 20px;
   text-wrap-mode: nowrap;
+  transition: transform 0.3s ease-in-out;
 }
 
-.commercial:hover, .residential:hover, .villa:hover, .apartment:hover, .warehouse:hover{
-  transform: scale(1.25);  
+.commercial:hover,
+.residential:hover,
+.villa:hover,
+.apartment:hover,
+.warehouse:hover {
+  transform: scale(1.25);
 }
 
 .commercial-card-logo,
