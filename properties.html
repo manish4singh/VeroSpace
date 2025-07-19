@@ -26,16 +26,11 @@
       <!-- CSS for Styling -->
       <link rel="stylesheet" href="./css/style.css" />
       <link rel="stylesheet" href="./css/pages/properties.css" />
+      <link rel="stylesheet" href="./css/pages/about-us.css">
       <link rel="stylesheet" href="./css/responsiveCSS.css" />
-      <!-- Add ScrollReveal CDN in head -->
-      <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
-      <!-- Add Trig.js CDN -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/trig-js/src/trig.min.js"></script> -->
-      <!-- Remove GSAP and ScrollTrigger CDN -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script> -->
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script> -->
+      
       <!-- AOS CSS CDN -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
       <header class="header-section">
@@ -56,7 +51,7 @@
                 <li><a class="nav-link" href="properties.html">Properties</a></li>
               </ul>
               <div class="nav-btns">
-                <a href="contact-us.html">Contact Us</a>
+                <a href="contact-us.html" class="nav-link">Contact Us</a>
                 <a href="#" class="btn-login" id="loginBtn">Login</a>
               </div>
             </nav>
@@ -85,7 +80,7 @@
       <!-- Banner Section -->
 
       <section class="banner-section">
-        <div class="banner-wrppr2" data-aos="fade-right" data-aos-duration="500" data-aos-offset="0">
+        <div class="banner-wrppr1" data-aos="zoom-in" data-aos-duration="500">
           <div class="container">
             <div class="banner-content">
               <h1>Properties</h1>
@@ -98,7 +93,7 @@
               </p>
             </div>
 
-            <div class="floating-search1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" style="opacity:1;transform:none;">
+            <div class="floating-search1" data-aos="zoom-in" data-aos-duration="500" style="opacity:1;transform:none;">
               <div class="form-area">
                 <form action="">
                   <div class="form-row">
@@ -1160,14 +1155,14 @@
           </form>
         </div>
       </div>
-
+<!-- AOS JS -->
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <!-- Local JS fles -->
+      <script src="./js/AOS.js"></script>
       <script src="./js/index.js"></script>
       <script src="./js/modal.js"></script>
       <script src="./js/properties.js"></script>
       <!-- Swiper JS -->
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <!-- AOS JS CDN -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-      <script src="./js/AOS.js"></script>
     </body>
   </html>

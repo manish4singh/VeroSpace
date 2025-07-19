@@ -26,7 +26,7 @@
     />
 
     <!-- AOS CSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS for Styling -->
     <link rel="stylesheet" href="./css/style.css" />
@@ -52,7 +52,7 @@
               <li><a class="nav-link" href="properties.html">Properties</a></li>
             </ul>
             <div class="nav-btns">
-              <a href="contact-us.html">Contact Us</a>
+              <a href="contact-us.html" class="nav-link">Contact Us</a>
               <a href="#" class="btn-login" id="loginBtn">Login</a>
             </div>
           </nav>
@@ -81,7 +81,7 @@
     <!-- Banner Section -->
 
     <section class="banner-section">
-      <div class="banner-wrppr1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="500">
+      <div class="banner-wrppr1" data-aos="zoom-in" data-aos-duration="500">
         <div class="container">
           <div class="banner-content">
             <h1>About Us</h1>
@@ -676,13 +676,15 @@
       </div>
     </div>
 
+    <!-- AOS CDN JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- JS Files -->
+
+    <script src="./js/AOS.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/about.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="./js/AOS.js"></script>
- 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Splide JS -->

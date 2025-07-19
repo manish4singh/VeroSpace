@@ -931,3 +931,19 @@ input[type="checkbox"] {
 .dropdown-content.show {
   display: block;
 }
+
+.banner-section,
+.properties-details-section,
+.companies-section {
+  min-height: unset !important;
+  padding-block: 40px !important;
+}
+
+.banner-wrppr1,
+.banner-wrppr2,
+.banner-wrppr {
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
