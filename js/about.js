@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     mobileOverlay.classList.remove("active");
     // Only remove no-scroll if no modal is open
     if (!document.getElementById('loginModal').classList.contains('active') && !document.getElementById('registerModal').classList.contains('active')) {
-      document.body.classList.remove("no-scroll", "menu-open");
+    document.body.classList.remove("no-scroll", "menu-open");
     } else {
       document.body.classList.remove("menu-open");
     }
