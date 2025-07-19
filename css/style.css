@@ -1101,7 +1101,7 @@ input[type="range"]::-webkit-slider-thumb {
 .stat-card {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   background: transparent;
 }
 .stat-icon-bg {
