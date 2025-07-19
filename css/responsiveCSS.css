@@ -39,7 +39,7 @@
   }
 
   .apartment-content {
-    margin-top: 250px;
+    margin-top: 160px;
   }
 
   .about-section {
@@ -673,9 +673,7 @@
     top: -225px;
   }
 
-  .apartment-content {
-    margin-top: 275px;
-  }
+ 
 
   .apartment-content > h3 {
     font-size: 26px;

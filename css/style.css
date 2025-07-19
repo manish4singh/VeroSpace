@@ -941,6 +941,10 @@ input[type="range"]::-webkit-slider-thumb {
   text-wrap-mode: nowrap;
 }
 
+.commercial:hover, .residential:hover, .villa:hover, .apartment:hover, .warehouse:hover{
+  transform: scale(1.25);  
+}
+
 .commercial-card-logo,
 .residential-card-logo,
 .villa-card-logo,
