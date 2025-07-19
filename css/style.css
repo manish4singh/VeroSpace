@@ -1316,6 +1316,12 @@ input[type="range"]::-webkit-slider-thumb {
   text-transform: uppercase;
 }
 
+.detail-btn:hover {
+  background: var(--color-white);
+  color: var(--color-dark-grey-3);
+  transition: background 0.3s, color 0.3s;
+}
+
 /* Services Section */
 
 .services-section {
