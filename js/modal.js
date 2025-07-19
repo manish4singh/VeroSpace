@@ -8,6 +8,7 @@ const closeRegisterModal = document.getElementById("closeRegisterModal");
 const forgotPasswordLink = document.getElementById("forgotPasswordLink");
 const switchToRegister = document.getElementById("switchToRegister");
 const switchToLogin = document.getElementById("switchToLogin");
+const mobileNav = document.querySelector('.mobile-overlay');
 
 // Scrollbar compensation logic
 function getScrollbarWidth() {
@@ -44,6 +45,12 @@ function openLoginModal() {
   if (typeof overlay !== 'undefined') {
     overlay.classList.remove("active");
   }
+}
+
+function openRegisterModal() {
+  registerModal.classList.add("active");
+  document.body.classList.add("no-scroll");
+  compensateScrollbar();
 }
 
 loginBtn && loginBtn.addEventListener("click", (e) => {
@@ -97,7 +104,7 @@ forgotPasswordLink && forgotPasswordLink.addEventListener("click", (e) => {
 switchToRegister && switchToRegister.addEventListener("click", (e) => {
   e.preventDefault();
   loginModal.classList.remove("active");
-  registerModal.classList.add("active");
+  openRegisterModal();
   // Keep no-scroll class since we're still in a modal
 });
 

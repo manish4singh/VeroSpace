@@ -64,17 +64,48 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.querySelector(".close-menu");
   const menuLinks = document.querySelectorAll(".mobile-menu-content a");
 
-  if (!hamburger || !mobileOverlay) {
-    console.error("Hamburger or overlay not found!");
-    return;
+  function openMenu() {
+    hamburger.classList.add("open");
+    mobileOverlay.classList.add("active");
+    document.body.classList.add("no-scroll", "menu-open");
   }
 
-  function toggleMenu() {
-    hamburger.classList.toggle("open");
-    mobileOverlay.classList.toggle("active");
+  function closeMenu() {
+    hamburger.classList.remove("open");
+    mobileOverlay.classList.remove("active");
+    // Only remove no-scroll if no modal is open
+    if (!document.getElementById('loginModal').classList.contains('active') && !document.getElementById('registerModal').classList.contains('active')) {
+      document.body.classList.remove("no-scroll", "menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
   }
 
-  hamburger.addEventListener("click", toggleMenu);
-  if (closeBtn) closeBtn.addEventListener("click", toggleMenu);
-  menuLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+  if (hamburger && mobileOverlay) {
+    hamburger.addEventListener("click", function () {
+      if (mobileOverlay.classList.contains("active")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeMenu);
+  }
+
+  menuLinks.forEach((link) => link.addEventListener("click", closeMenu));
+
+  mobileOverlay.addEventListener("click", (e) => {
+    if (e.target === mobileOverlay) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileOverlay.classList.contains("active")) {
+      closeMenu();
+    }
+  });
 });

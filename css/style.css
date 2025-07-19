@@ -14,8 +14,10 @@ body {
   overflow-x: hidden !important;
 }
 
-body.no-scroll {
+/* Prevent background scroll when overlay or modal is open */
+.no-scroll {
   overflow: hidden !important;
+  height: 100vh !important;
 }
 
 /* Column CSS code */

@@ -101,7 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeMenu() {
     hamburger.classList.remove("open");
     mobileOverlay.classList.remove("active");
-    document.body.classList.remove("no-scroll", "menu-open");
+    // Only remove no-scroll if no modal is open
+    if (!document.getElementById('loginModal').classList.contains('active') && !document.getElementById('registerModal').classList.contains('active')) {
+      document.body.classList.remove("no-scroll", "menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
   }
 
   if (hamburger && mobileOverlay) {
