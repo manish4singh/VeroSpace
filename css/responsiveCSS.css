@@ -1051,6 +1051,10 @@
   .banner-wrppr2 {
     border-radius: 10px !important;
   }
+  
+  .contact-form-area{
+    padding: 10px !important;
+  }
 }
 
 @media screen and (max-width: 400px) {
