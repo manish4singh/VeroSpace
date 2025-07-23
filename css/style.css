@@ -260,8 +260,6 @@ a:hover {
 
 .nav-link:hover {
   color: var(--color-accent);
-  background: yellow;
-  border-radius: 15px;
 }
 
 .nav-link.active {
