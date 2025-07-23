@@ -260,6 +260,9 @@ a:hover {
 
 .nav-link:hover {
   color: var(--color-accent);
+  padding: 10px 15px;
+  background: forestgreen;
+  border-radius: 20px;
 }
 
 .nav-link.active {
