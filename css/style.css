@@ -1902,6 +1902,10 @@ input[type="range"]::-webkit-slider-thumb {
   color: var(--color-mid-grey-2);
 }
 
+.footer-center > ul > li > a:hover{
+  color: var(--color-primary);
+}
+
 .footer-right {
   width: 100%;
   min-height: 174px;
