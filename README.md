@@ -6,7 +6,7 @@ Welcome to VeroSpace, your trusted real estate expert. We believe real estate is
 
 ## 🌟 Live Demo
 
-🔗 **Website**: [https://soumitra69.github.io/VeroSpace/](https://soumitra69.github.io/VeroSpace/)
+🔗 **Website**: [https://manish4singh.github.io/VeroSpace/](https://manish4singh.github.io/VeroSpace/)
 
 🎨 **Design**: [Figma Design File](https://www.figma.com/design/t9JBo8tuqrjaLiUyBBBJDT/VeroSpace---Chandan-Copy-?m=auto&t=A04u1RNP7b9qcdyI-6)
 
