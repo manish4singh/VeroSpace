@@ -209,8 +209,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 📞 Contact
 
 ### Project Maintainer
-- **GitHub**: [@soumitra69](https://github.com/soumitra69)
-- **Project Repository**: [VeroSpace on GitHub](https://github.com/soumitra69/VeroSpace)
+- **GitHub**: [@manish4singh](https://github.com/manish4singh)
+- **Project Repository**: [VeroSpace on GitHub](https://github.com/manish4singh/VeroSpace)
 
 ### Get in Touch
 - **Issues**: Use GitHub Issues for bug reports and feature requests
